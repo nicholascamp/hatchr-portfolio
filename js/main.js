@@ -1,5 +1,15 @@
 $(document).ready(function () {
-
+    //*menu*//
+    var nav = $('.nav-total');
+    
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 602) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+    //*modal*//
     $('a[name=modal]').click(function (e) {
         e.preventDefault();
 
@@ -21,7 +31,7 @@ $(document).ready(function () {
         var winH = $(window).height();
         var winW = $(window).width();
 
-        $(id).css('top', winH / 2 - $(id).height() / 2);
+        $(id).css('top:0;', winH / 2 - $(id).height() / 2);
         $(id).css('left', winW / 2 - $(id).width() / 2);
 
         $(id).fadeIn(2000);
@@ -40,7 +50,7 @@ $(document).ready(function () {
         $(this).hide();
         $('.window').hide();
     });
-
+    //*carroussel*//
     $(function () {
 
         $('#demo5').scrollbox({
@@ -55,5 +65,7 @@ $(document).ready(function () {
         });
 
     });
+    
+    
 
 });

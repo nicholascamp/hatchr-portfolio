@@ -17,17 +17,18 @@ small {
 header {
     margin: 0;
     width: 100%;
-    height: 665px;
+    height: 465px;
     background-image: url(../img/background-top.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 1px;
+    padding-top: 200px;
     color: #fff;
 }
 .content-header {
     text-align: center;
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
+
 #jobs {
     width: 100%;
     height: 300px;
@@ -113,7 +114,7 @@ header {
     float: left;
     text-align: center;
 }
-#carroussel {
+#clients {
     width: 100%;
     height: 300px;
     background-color: #e9e9e9;
@@ -163,11 +164,7 @@ header {
     background-color: #f4b4b4;
     position: fixed;
 }
-//*corroussel*// 
-body {
-    
-}
-.scroll-img {
+//*corroussel*// body {} .scroll-img {
     max-width: 880px;
     height: 200px;
     overflow: hidden;
@@ -191,19 +188,14 @@ body {
 #demo5.scroll-img ul {
     width: 1500px;
 }
-
 #demo5-btn {
     width: 920px;
     margin: -150px auto;
-    
-    
-
 }
 #demo5-btn button {
     background-color: #e9e9e9;
     border: none;
     vertical-align: middle;
-    
 }
 .btn-left {
     float: left;
@@ -211,3 +203,76 @@ body {
 .btn-right {
     float: right;
 }
+.nav-total {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    margin-top: -95px;
+    padding-bottom: 35px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 4px 7px 0px rgba(50, 50, 50, 0.42);
+    -moz-box-shadow: 0px 4px 7px 0px rgba(50, 50, 50, 0.42);
+    box-shadow: 0px 4px 7px 0px rgba(50, 50, 50, 0.42);
+}
+.f-nav {
+    z-index: 9999;
+    position: fixed;
+    top: 90px;
+    width: 100%;
+}
+nav {
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+}
+nav ul li {
+    display: inline;
+    float: left;
+    margin: 10px 1.2em;
+}
+nav ul li a,
+nav ul li a:visited {
+    font-family: pacifico;
+    font-size: 1.4em;
+    color: #ff6600;
+    float: left;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #ff9900;
+}
+#contact {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+}
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+form input {
+    display: block;
+    margin: 10px 0;
+    width: 586px;
+    height: 30px;
+    border: 2px solid #ff6600;
+    padding-left: 10px;
+}
+form label {
+    color: #ff6600;
+    font-family: pacifico;
+    font-size: 1.4em;
+}
+.last-input {
+    margin-bottom: 0;
+    height: 150px;
+    vertical-align: text-top;
+}
+.submit {
+    width: 100%;
+    height: 40px;
+    background-color: #ff6600;
+    border: none;
+    color: #fff;
+}
+    

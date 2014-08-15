@@ -13,18 +13,23 @@
        <h1 class="content-header"><img src="img/logo.png" alt="Hatchr"></h1>
        <h2 class="content-header">Desenvolvimento Web <small>com foco no usuario</small></h2>
    </header>
- <!--  
-   <nav>
-       <ul>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-       </ul>
-   </nav>
- -->  
+
+    <div class="nav-total">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Como Trabalhamos</a></li>
+                <li><a href="#">Processo</a></li>
+                <li><a href="#">Para quem</a></li>
+                <li><a name="#clients">Clientes</a></li>
+                <li><a name="#contact">Contato</a></li>
+
+            </ul>
+            <div class="clear"></div> 
+        </nav>
+    </div>
+ 
    <section id="jobs">
     <a href="#dialog-dids" name="modal"><article id="dids"></article></a>
        
@@ -149,7 +154,7 @@
        </div>
    </section>
        
-       <section id="carroussel">
+       <section id="clients">
            
            <div id="demo5" class="scroll-img">
       <ul>
@@ -177,22 +182,23 @@
            
        </section>
        
-       <section>
-       
-            <form action="">
-              
-               <label for="name"></label>
-               <input type="text" name="name" placeholder="Digite aqui seu nome" required>
-               
-               <label for="email"></label>
-               <input type="email" name="email" placeholder="Digite aqui seu email" required>
-               
-               <label for=""></label>
-               <input type="text" name="message" placeholder="Digite aqui sua mensagem" required>
-               
-               <button>enviar</button>
-               
-           </form>
+       <section id="contact">
+                       
+                <form action="">
+
+                   <label for="name">Nome</label>
+                   <input type="text" name="name" placeholder="Digite aqui seu nome" required>
+
+                   <label for="email">Email</label>
+                   <input type="email" name="email" placeholder="Digite aqui seu email" required>
+
+                   <label for="">Mensagem</label>
+                   <input type="text" class="last-input" name="message" placeholder="Digite aqui sua mensagem" required>
+
+                   <button class="submit">enviar</button>
+
+               </form>
+                  
        </section>
    
     <div id="mask"></div>
