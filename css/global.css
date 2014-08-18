@@ -5,6 +5,10 @@
     font-weight: normal;
     font-style: normal;
 }
+html,
+body{
+    height: 100%;
+}
 .wrapper {
     max-width: 1060px;
     height: auto;
@@ -23,6 +27,11 @@ header {
     background-repeat: no-repeat;
     padding-top: 200px;
     color: #fff;
+}
+section {
+    height: 100%;
+    min-height: 100%;
+    padding-top: 60px;
 }
 .content-header {
     text-align: center;
@@ -71,37 +80,13 @@ header {
     text-align: center;
     font-size: 2.4em;
 }
-#how-it-work {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-#how-it-work p {
-    max-width: 680px;
-    margin: 30px auto;
-    color: #939393;
-    text-align: center;
-}
 #process {
     background-color: #ff6600;
     text-align: center;
     width: 100%;
     height: auto;
 }
-#team {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-image: url(../img/bg-team.jpg);
-    background-repeat: repeat-x;
-    background-position: bottom;
-    padding-top: 1px;
-}
-#team article {
-    width: 20%;
-    padding: 2.5%;
-    float: left;
-}
+
 #for-who {
     width: 100%;
     height: auto;
@@ -245,14 +230,16 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     padding: 60px 0;
+    background-image: url(../img/bg-contact.jpg);
+    background-repeat: repeat-x;
 }
 form {
     width: 600px;
     margin: 0 auto;
 }
-form input {
+.form-contact {
     display: block;
-    margin: 10px 0;
+    margin: 10px 0 0;
     width: 586px;
     height: 30px;
     border: 2px solid #ff6600;
@@ -262,17 +249,16 @@ form label {
     color: #ff6600;
     font-family: pacifico;
     font-size: 1.4em;
+    margin-top: 10px;
 }
-.last-input {
-    margin-bottom: 0;
-    height: 150px;
-    vertical-align: text-top;
-}
+    
 .submit {
     width: 100%;
     height: 40px;
     background-color: #ff6600;
     border: none;
     color: #fff;
+    font-family: pacifico;
+    font-size: 1.4em;
 }
     
