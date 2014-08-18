@@ -11,6 +11,20 @@ $(document).ready(function () {
         }
     });
 
+    var logoPaths = $('header h1 path');
+    logoPaths.each(function (i, p) {
+        var length = p.getTotalLength(),
+            path = $(p);
+
+        path.attr('stroke-dasharray', length + ' ' + length);
+        path.attr('stroke-dashoffset', length);
+        path.get(0).getBoundingClientRect();
+    });
+
+    logoPaths.css('transition', 'stroke-dashoffset 4s ease-in-out, fill 6s ease-in-out');
+    logoPaths.attr('fill', '#ffffff');
+    logoPaths.attr('stroke-dashoffset', 0);
+
     //*modal*//
     $('a[name=modal]').click(function (e) {
         e.preventDefault();
@@ -55,10 +69,10 @@ $(document).ready(function () {
     //*carroussel*//
     $(function () {
 
-        $('#demo5').scrollbox({
-            direction: 'h',
-            distance: 200
-        });
+        // $('#demo5').scrollbox({
+        //     direction: 'h',
+        //     distance: 200
+        // });
         $('#demo5-backward').click(function () {
             $('#demo5').trigger('backward');
         });

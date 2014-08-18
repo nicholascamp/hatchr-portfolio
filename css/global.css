@@ -402,6 +402,8 @@ header {
     text-align: center;
     font-size: 6em;
     margin: 0; }
+    header h1 path {
+      stroke-location: inside; }
   header small {
     display: block; }
 
