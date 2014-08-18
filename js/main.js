@@ -1,14 +1,16 @@
 $(document).ready(function () {
     //*menu*//
-    var nav = $('.nav-total');
-    
+    var nav = $('nav'),
+        navTopPos = nav.position().top - nav.outerHeight();
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 602) {
+        if ($(this).scrollTop() > navTopPos) {
             nav.addClass("f-nav");
         } else {
             nav.removeClass("f-nav");
         }
     });
+
     //*modal*//
     $('a[name=modal]').click(function (e) {
         e.preventDefault();
@@ -65,7 +67,7 @@ $(document).ready(function () {
         });
 
     });
-    
-    
+
+
 
 });
