@@ -1,10 +1,13 @@
 $(document).ready(function () {
-    //*menu*//
+    /*
+     * Menu principal
+     * Se torna fixo no topo quando fora do viewport
+     */
     var nav = $('nav'),
-        navTopPos = nav.position().top - nav.outerHeight();
+        navTopPos = nav.position().top;
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > navTopPos) {
+        if ($(this).scrollTop() > navTopPos - nav.outerHeight()) {
             nav.addClass("f-nav");
         } else {
             nav.removeClass("f-nav");

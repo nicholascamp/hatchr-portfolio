@@ -1,7 +1,10 @@
 @import 'partials/normalize';
 @import 'partials/fonts';
 
+$brand-primary: #ff6600;
+
 $menu-height: 80px;
+$menu-height-small: 60px;
 
 // border-box FTW!
 * {
@@ -66,15 +69,29 @@ header {
 
 nav {
     background-color: #fff;
+    box-shadow: 1px 0px 0px 2px transparentize(black, 0.95);
+    font-family: 'Aller', sans-serif;
+    font-size: 1.4em;
     height: $menu-height;
     line-height: $menu-height;
     margin-top: -($menu-height);
+    position: relative;
+    transition: all 250ms ease-in-out;
     width: 100%;
-    font-size: 1.2em;
+
+    &:before {
+        background: transparentize($brand-primary, 0.7);
+        content: '';
+        height: 1px;
+        left: 2%;
+        position: absolute;
+        top: $menu-height / 2 - 1px;
+        width: 96%;
+    }
 
     ul {
-        height: 60px;
         margin: 0 auto;
+        position: relative;
         width: 960px;
     }
 
@@ -85,15 +102,45 @@ nav {
     }
 
     a {
-        color: #ff6600;
+        background: white;
+        color: $brand-primary;
+        display: block;
+        margin: 0 20px;
         text-decoration: none;
     }
 
+    .logo {
+        opacity: 0;
+        transition: all 500ms;
+        width: 0;
+
+        img {
+            vertical-align: middle;
+            margin-top: -5px;
+        }
+    }
+
     &.f-nav {
+        font-size: 1.15em;
+        height: $menu-height-small;
+        line-height: $menu-height-small;
         position: fixed;
         top: $menu-height;
         width: 100%;
-        z-index: 9999;
+        z-index: 1000;
+
+        &:before {
+            display: none;
+        }
+
+        .logo {
+            opacity: 1;
+            width: 16.666666%;
+        }
+
+        li {
+            width: 16.666666%;
+        }
     }
 }
 
