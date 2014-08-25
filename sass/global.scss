@@ -3,7 +3,7 @@
 
 $brand-primary: #ff6600;
 
-$menu-height: 80px;
+$menu-height: 100px;
 $menu-height-small: 60px;
 
 // border-box FTW!
@@ -51,15 +51,18 @@ header {
     background-size: cover;
     color: #fff;
     height: 100%;
-    padding-top: 200px;
+    padding-top: 12.5%;
     width: 100%;
 
-    h1 {
-        font-family: 'Pacifico';
-        font-weight: normal;
-        text-align: center;
+    h2 {
+        font-family: 'Pacifico', sans-serif;
         font-size: 6em;
-        margin: 0;
+        font-weight: lighter;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 auto;
+        text-align: left;
+        width: 80%;
     }
 
     small {
@@ -68,60 +71,45 @@ header {
 }
 
 nav {
-    background-color: #fff;
-    box-shadow: 1px 0px 0px 2px transparentize(black, 0.95);
-    font-family: 'Aller', sans-serif;
-    font-size: 1.4em;
+    color: white;
+    font-family: 'Novecento Wide', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
     height: $menu-height;
     line-height: $menu-height;
-    margin-top: -($menu-height);
+    margin: -($menu-height) auto 0 auto;
     position: relative;
+    text-align: center;
+    text-transform: uppercase;
     transition: all 250ms ease-in-out;
-    width: 100%;
-
-    &:before {
-        background: transparentize($brand-primary, 0.7);
-        content: '';
-        height: 1px;
-        left: 2%;
-        position: absolute;
-        top: $menu-height / 2 - 1px;
-        width: 96%;
-    }
 
     ul {
-        margin: 0 auto;
-        position: relative;
-        width: 960px;
+        margin: 0;
+        padding: 0;
     }
 
     li {
-        float: left;
-        text-align: center;
-        width: 20%;
+        display: inline-block;
     }
 
     a {
-        background: white;
-        color: $brand-primary;
+        color: white;
         display: block;
-        margin: 0 20px;
+        padding: 0 30px;
         text-decoration: none;
+        transition: all 150ms;
     }
 
-    .logo {
-        opacity: 0;
-        transition: all 500ms;
-        width: 0;
-
-        img {
-            vertical-align: middle;
-            margin-top: -5px;
-        }
+    #logo {
+        margin-top: -5px;
+        transition: all 250ms;
+        vertical-align: middle;
     }
 
     &.f-nav {
-        font-size: 1.15em;
+        background: transparentize(white, 0.05);
+        box-shadow: 1px 0px 0px 2px transparentize(black, 0.95);
+        color: $brand-primary;
         height: $menu-height-small;
         line-height: $menu-height-small;
         position: fixed;
@@ -129,17 +117,18 @@ nav {
         width: 100%;
         z-index: 1000;
 
-        &:before {
-            display: none;
+        a {
+            color: $brand-primary;
         }
 
-        .logo {
-            opacity: 1;
-            width: 16.666666%;
-        }
+        #logo {
+            height: 30px;
+            width: auto;
 
-        li {
-            width: 16.666666%;
+            path {
+                fill: $brand-primary;
+                stroke: $brand-primary;
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
     });
 
-    var logoPaths = $('header h1 path');
+    var logoPaths = $('#logo path');
     logoPaths.each(function (i, p) {
         var length = p.getTotalLength(),
             path = $(p);

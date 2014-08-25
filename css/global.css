@@ -388,72 +388,65 @@ header {
   background-size: cover;
   color: #fff;
   height: 100%;
-  padding-top: 200px;
+  padding-top: 12.5%;
   width: 100%; }
-  header h1 {
-    font-family: 'Pacifico';
-    font-weight: normal;
-    text-align: center;
+  header h2 {
+    font-family: 'Pacifico', sans-serif;
     font-size: 6em;
-    margin: 0; }
+    font-weight: lighter;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 auto;
+    text-align: left;
+    width: 80%; }
   header small {
     display: block; }
 
 nav {
-  background-color: #fff;
-  box-shadow: 1px 0px 0px 2px rgba(0, 0, 0, 0.05);
-  font-family: 'Aller', sans-serif;
-  font-size: 1.4em;
-  height: 80px;
-  line-height: 80px;
-  margin-top: -80px;
+  color: white;
+  font-family: 'Novecento Wide', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  margin: -100px auto 0 auto;
   position: relative;
-  transition: all 250ms ease-in-out;
-  width: 100%; }
-  nav:before {
-    background: rgba(255, 102, 0, 0.3);
-    content: '';
-    height: 1px;
-    left: 2%;
-    position: absolute;
-    top: 39px;
-    width: 96%; }
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 250ms ease-in-out; }
   nav ul {
-    margin: 0 auto;
-    position: relative;
-    width: 960px; }
+    margin: 0;
+    padding: 0; }
   nav li {
-    float: left;
-    text-align: center;
-    width: 20%; }
+    display: inline-block; }
   nav a {
-    background: white;
-    color: #ff6600;
+    color: white;
     display: block;
-    margin: 0 20px;
-    text-decoration: none; }
-  nav .logo {
-    opacity: 0;
-    transition: all 500ms;
-    width: 0; }
-    nav .logo img {
-      vertical-align: middle;
-      margin-top: -5px; }
+    padding: 0 30px;
+    text-decoration: none;
+    transition: all 150ms; }
+  nav #logo {
+    margin-top: -5px;
+    transition: all 250ms;
+    vertical-align: middle; }
   nav.f-nav {
-    font-size: 1.15em;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 0px 0px 2px rgba(0, 0, 0, 0.05);
+    color: #ff6600;
     height: 60px;
     line-height: 60px;
     position: fixed;
-    top: 80px;
+    top: 100px;
     width: 100%;
     z-index: 1000; }
-    nav.f-nav:before {
-      display: none; }
-    nav.f-nav .logo {
-      opacity: 1;
-      width: 16.666666%; }
-    nav.f-nav li {
-      width: 16.666666%; }
+    nav.f-nav a {
+      color: #ff6600; }
+    nav.f-nav #logo {
+      height: 30px;
+      width: auto; }
+      nav.f-nav #logo path {
+        fill: #ff6600;
+        stroke: #ff6600; }
 
 section {
   height: 100%;
