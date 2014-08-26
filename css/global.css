@@ -354,6 +354,27 @@ td,
 th {
   padding: 0; }
 
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -370,7 +391,7 @@ body {
 
 body {
   background: #ffffff;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 ul,
 ol {
@@ -391,14 +412,20 @@ header {
   padding-top: 12.5%;
   width: 100%; }
   header h2 {
-    font-family: 'Pacifico', sans-serif;
-    font-size: 6em;
+    font-family: "Novecento Wide", sans-serif;
+    font-size: 5em;
     font-weight: lighter;
     font-weight: normal;
     line-height: 1;
     margin: 0 auto;
     text-align: left;
     width: 80%; }
+    header h2 span {
+      display: block; }
+      header h2 span:first-child {
+        animation: slideFromLeft 1.5s forwards; }
+      header h2 span:last-child {
+        animation: slideFromRight 1.5s forwards; }
   header small {
     display: block; }
 
@@ -425,11 +452,14 @@ nav {
     padding: 0 30px;
     text-decoration: none;
     transition: all 150ms; }
+    nav a:hover {
+      transform: translateY(-5px); }
   nav #logo {
     margin-top: -5px;
     transition: all 250ms;
     vertical-align: middle; }
-  nav.f-nav {
+  nav.fixed {
+    animation: slideFromTop 500ms forwards;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 1px 0px 0px 2px rgba(0, 0, 0, 0.05);
     color: #ff6600;
@@ -439,12 +469,13 @@ nav {
     top: 100px;
     width: 100%;
     z-index: 1000; }
-    nav.f-nav a {
+    nav.fixed a {
       color: #ff6600; }
-    nav.f-nav #logo {
+    nav.fixed #logo {
       height: 30px;
       width: auto; }
-      nav.f-nav #logo path {
+      nav.fixed #logo path {
+        animation: none;
         fill: #ff6600;
         stroke: #ff6600; }
 
@@ -637,5 +668,3 @@ form label {
   color: #fff;
   font-family: pacifico;
   font-size: 1.4em; }
-
-/*# sourceMappingURL=global.css.map */

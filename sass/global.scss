@@ -6,6 +6,45 @@ $brand-primary: #ff6600;
 $menu-height: 100px;
 $menu-height-small: 60px;
 
+$novecento-stack: 'Novecento Wide', sans-serif;
+$open-sans-stack: 'Open Sans', sans-serif;
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 // border-box FTW!
 * {
     -webkit-box-sizing: border-box;
@@ -28,7 +67,7 @@ body {
 
 body {
     background: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $open-sans-stack;
 }
 
 ul,
@@ -55,14 +94,26 @@ header {
     width: 100%;
 
     h2 {
-        font-family: 'Pacifico', sans-serif;
-        font-size: 6em;
+        font-family: $novecento-stack;
+        font-size: 5em;
         font-weight: lighter;
         font-weight: normal;
         line-height: 1;
         margin: 0 auto;
         text-align: left;
         width: 80%;
+
+        span {
+            display: block;
+
+            &:first-child {
+                animation: slideFromLeft 1.5s forwards;
+            }
+
+            &:last-child {
+                animation: slideFromRight 1.5s forwards;
+            }
+        }
     }
 
     small {
@@ -98,6 +149,10 @@ nav {
         padding: 0 30px;
         text-decoration: none;
         transition: all 150ms;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 
     #logo {
@@ -106,7 +161,8 @@ nav {
         vertical-align: middle;
     }
 
-    &.f-nav {
+    &.fixed {
+        animation: slideFromTop 500ms forwards;
         background: transparentize(white, 0.05);
         box-shadow: 1px 0px 0px 2px transparentize(black, 0.95);
         color: $brand-primary;
@@ -126,6 +182,7 @@ nav {
             width: auto;
 
             path {
+                animation: none;
                 fill: $brand-primary;
                 stroke: $brand-primary;
             }

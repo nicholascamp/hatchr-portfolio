@@ -8,9 +8,9 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > navTopPos - nav.outerHeight()) {
-            nav.addClass("f-nav");
+            nav.addClass('fixed');
         } else {
-            nav.removeClass("f-nav");
+            nav.removeClass('fixed');
         }
     });
 
