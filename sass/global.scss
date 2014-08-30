@@ -1,12 +1,13 @@
 @import 'partials/normalize';
 @import 'partials/fonts';
+@import 'partials/animation';
 
 $brand-primary: #ff6600;
 
 $menu-height: 100px;
 $menu-height-small: 60px;
 
-$novecento-stack: 'Novecento Wide', sans-serif;
+$novecento-stack: 'Novecento', sans-serif;
 $open-sans-stack: 'Open Sans', sans-serif;
 
 @keyframes slideFromLeft {
@@ -73,6 +74,7 @@ body {
 ul,
 ol {
     list-style: none;
+    padding: 0;
 }
 
 .wrapper {
@@ -90,7 +92,7 @@ header {
     background-size: cover;
     color: #fff;
     height: 100%;
-    padding-top: 12.5%;
+    padding-top: 15%;
     width: 100%;
 
     h2 {
@@ -123,7 +125,7 @@ header {
 
 nav {
     color: white;
-    font-family: 'Novecento Wide', sans-serif;
+    font-family: $novecento-stack;
     font-size: 1em;
     font-weight: bold;
     height: $menu-height;
@@ -159,6 +161,8 @@ nav {
         margin-top: -5px;
         transition: all 250ms;
         vertical-align: middle;
+        shape-rendering: crispEdge
+        
     }
 
     &.fixed {
@@ -185,6 +189,8 @@ nav {
                 animation: none;
                 fill: $brand-primary;
                 stroke: $brand-primary;
+                shape-rendering: crispEdge;
+                
             }
         }
     }
@@ -194,62 +200,97 @@ section {
     height: 100%;
     min-height: 100%;
 }
-
-.content-header {
-    text-align: center;
-    margin: 10px auto 0;
-}
-
 #jobs {
-    width: 100%;
-}
-
-#jobs article {
-    display: inline;
-    float: left;
-    height: 300px;
-    -webkit-transition: background 0.5s ease-in-out;
-            transition: background 0.5s ease-in-out;
-    width: 25%;
-}
-
-#dids {
-    background-image: url(../img/job-dids.jpg);
-}
-
-#familybox {
-    background-image: url(../img/job-familybox.jpg);
-}
-
-#starthinks {
-    background-image: url(../img/job-starthinks.jpg);
-}
-
-#wepipe {
-    background-image: url(../img/job-wepipe.jpg);
-}
-
-#dids:hover {
-    background-image: url(../img/job-dids-hover.jpg);
-}
-
-#familybox:hover {
-    background-image: url(../img/job-familybox-hover.jpg);
-}
-
-#starthinks:hover {
-    background-image: url(../img/job-starthinks-hover.jpg);
-}
-
-#wepipe:hover {
-    background-image: url(../img/job-wepipe-hover.jpg);
-}
-
-.title {
-    color: #ff6600;
-    font-family: pacifico;
-    text-align: center;
-    font-size: 2.4em;
+    color: #333;
+    
+    %photo {
+        background-color: #ff6600;
+        margin: 2.5% 0 0 2.5%;
+        float:left;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-size 200ms;
+        box-shadow: 0px 1px 0px 2px rgba(50, 50, 50, 0.09);
+    }
+    h2 {
+        margin-top: 0;
+    }
+    .mosaic {
+        width: 500px;
+        height: 500px;
+        margin-top: 60px;
+        float: left;
+        
+        
+        .photo1 {
+            width: 30%;
+            height: 60%;
+            background-image: url(../img/jobs/dids/image1.jpg);
+            background-size: 420% auto;
+            @extend %photo;
+            animation: animation-from-left 500ms forwards;
+            
+            
+            &:hover {
+                background-size: 490% auto;
+            }
+        }
+        .photo2{
+            width: 62.5%;
+            height: 30%;
+            background-image: url(../img/jobs/dids/image2.jpg);
+            background-size: 120% auto;
+            @extend %photo;
+            animation: animation-from-top 500ms forwards;
+            
+            &:hover {
+                background-size: 170% auto;
+            }
+        }
+        .photo3 {
+            width: 30%;
+            height: 60%;
+            background-image: url(../img/jobs/dids/image4.jpg);
+            background-size: 420% auto;
+            @extend %photo;
+            animation: animation-from-bottom 500ms forwards;
+            
+            &:hover {
+                background-size: 490% auto;
+            }
+        }
+        .photo4 {
+            width: 30%;
+            height: 30%;
+            background-image: url(../img/jobs/dids/image3.jpg);
+            background-size: 260% auto;
+            @extend %photo;
+            animation: animation-from-right 500ms forwards;
+           
+            &:hover {
+                background-size: 330% auto;
+            }
+        }
+        
+    }
+    
+    .description-job {
+        width: 450px;
+        float: left;
+        margin: 60px 0 0 20px;
+        
+        
+        li {
+            display: inline;
+            padding-right: 20px;
+            color: $brand-primary;
+            transition: color 600ms;
+            
+            &:hover {
+                color: darken($brand-primary, 20%);
+            }
+        }
+    }   
 }
 
 #process {
