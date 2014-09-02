@@ -35,4 +35,25 @@ $(document).ready(function () {
     logoPaths.css('transition', 'stroke-dashoffset 4s ease-in-out, fill 6s ease-in-out');
     logoPaths.attr('fill', '#ffffff');
     logoPaths.attr('stroke-dashoffset', 0);
+
+    /*
+     * Telas de detalhamento de cases
+     */
+    $('#cases article').on('click', function (e) {
+        e.preventDefault();
+        var caseID = $(this).attr('data-case');
+            caseDetail =  $('#cases-detail [data-case=' + caseID + ']');
+
+        caseDetail.addClass('active');
+    });
+
+    $('#cases-detail .close-button').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().removeClass('active');
+    });
+
+    $('#cases-detail .slider ul').slick({
+        'slide': 'li',
+        'autoplay': true
+    });
 });

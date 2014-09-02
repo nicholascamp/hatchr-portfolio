@@ -36,13 +36,13 @@
     </nav>
     <section id="cases">
         <div class="wrapper">
-            <article class="case-thumbnail dids">
+            <article class="case-thumbnail dids" data-case="dids">
                 <a href="#">
                     <h3>Did's Hostel</h3>
                     <img src="img/view.png" alt="">
                 </a>
             </article>
-            <article class="case-thumbnail starthink">
+            <article class="case-thumbnail starthink" data-case="starthink">
                 <a href="#">
                     <h3>Star Uniforms</h3>
                     <img src="img/view.png" alt="">
@@ -51,14 +51,16 @@
             <article class="case-thumbnail"></article>
             <article class="case-thumbnail"></article>
         </div>
-        <article class="case-detail dids">
-            <a href="#" class="close-detail-button"></a>
+    </section>
+    <section id="cases-detail">
+        <article class="dids" data-case="dids">
+            <a href="#" class="close-button"></a>
             <section class="slider">
-                <ul class="photos">
-                    <li><img src="img/cases/dids/photos/1.jpg" alt=""></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul>
+                    <li><img src="img/cases/dids/image1.png" alt=""></li>
+                    <li><img src="img/cases/dids/image2.jpg" alt=""></li>
+                    <li><img src="img/cases/dids/image3.jpg" alt=""></li>
+                    <li><img src="img/cases/dids/image4.jpg" alt=""></li>
                 </ul>
             </section>
             <aside class="about">
@@ -158,6 +160,7 @@
     </section>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 @import 'partials/fonts';
 @import 'partials/animation';
 
+@import "vendor/slick";
+
 $brand-primary: #ff6600;
 
 $menu-height: 100px;
@@ -212,11 +214,12 @@ section {
     margin: 0 auto;
     position: relative;
 
-    .case-thumbnail {
+    article {
         background-color: #f0f0f0;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: auto 400px;
+        box-shadow: 0 0 2px 0 transparentize(black, 0.95);
         border-radius: 4px;
         float: left;
         height: 180px;
@@ -273,29 +276,39 @@ section {
             font-family: $novecento-stack;
             font-size: 2em;
             font-weight: normal;
-            text-align: center;
-            margin-bottom: 0;
+            margin-bottom: 10px;
             margin-top: 50px;
+            text-align: center;
         }
     }
+}
 
-    .case-detail {
+#cases-detail {
+    article {
         background: #ff6600;
         height: 100%;
-        position: absolute;
-        right: 0;
+        opacity: 0;
+        position: fixed;
+        right: -100%;
         top: 0;
+        transition: all 750ms;
+        visibility: hidden;
         width: 100%;
         z-index: 1000;
 
-        .close-detail-button {
-            // background: url('../img/case-detail-back.png') no-repeat center center;
-            background: white;
-            height: 32px;
+        &.active {
+            opacity: 1;
+            right: 0;
+            visibility: visible;
+        }
+
+        .close-button {
+            background: url('../img/case-detail-back.png') no-repeat center center;
+            height: 48px;
             position: absolute;
             right: 0;
             top: 0;
-            width: 32px;
+            width: 48px;
             z-index: 1001;
         }
 
@@ -309,6 +322,22 @@ section {
             position: absolute;
             top: 0;
             width: 70%;
+        }
+
+        .slick-slider,
+        .slick-list,
+        .slick-track {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slick-slide {
+            text-align: center;
+
+            img {
+                display: inline-block;
+            }
         }
 
         .about {
@@ -338,11 +367,9 @@ section {
         }
     }
 
-    .case-detail {
-        &.dids {
-            .slider {
-                background-image: url('../img/cases/dids/background.png');
-            }
+    .dids {
+        .slider {
+            background-image: url('../img/cases/dids/background.png');
         }
     }
 }
