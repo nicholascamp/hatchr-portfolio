@@ -18,7 +18,11 @@ $(document).ready(function () {
         $(window).trigger('scroll');
     }
 
+    /*
+     * Animação de escrita manual da logomarca
+     */
     var logoPaths = $('#logo path');
+
     logoPaths.each(function (i, p) {
         var length = p.getTotalLength(),
             path = $(p);
