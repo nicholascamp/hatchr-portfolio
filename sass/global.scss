@@ -77,6 +77,12 @@ ol {
     padding: 0;
 }
 
+h2 {
+    font-family: $novecento-stack;
+    font-weight: normal;
+    margin: 0;
+}
+
 .wrapper {
     display: block;
     height: auto;
@@ -148,6 +154,7 @@ nav {
     a {
         color: white;
         display: block;
+        font-weight: normal;
         padding: 0 30px;
         text-decoration: none;
         transition: all 150ms;
@@ -161,8 +168,7 @@ nav {
         margin-top: -5px;
         transition: all 250ms;
         vertical-align: middle;
-        shape-rendering: crispEdge
-        
+        shape-rendering: crispEdge;
     }
 
     &.fixed {
@@ -190,7 +196,7 @@ nav {
                 fill: $brand-primary;
                 stroke: $brand-primary;
                 shape-rendering: crispEdge;
-                
+
             }
         }
     }
@@ -199,98 +205,146 @@ nav {
 section {
     height: 100%;
     min-height: 100%;
+    padding-top: $menu-height;
 }
-#jobs {
-    color: #333;
-    
-    %photo {
-        background-color: #ff6600;
-        margin: 2.5% 0 0 2.5%;
-        float:left;
-        background-position: center;
+
+#cases {
+    margin: 0 auto;
+    position: relative;
+
+    .case-thumbnail {
+        background-color: #f0f0f0;
+        background-position: center center;
         background-repeat: no-repeat;
-        transition: background-size 200ms;
-        box-shadow: 0px 1px 0px 2px rgba(50, 50, 50, 0.09);
-    }
-    h2 {
-        margin-top: 0;
-    }
-    .mosaic {
-        width: 500px;
-        height: 500px;
-        margin-top: 60px;
+        background-size: auto 400px;
+        border-radius: 4px;
         float: left;
-        
-        
-        .photo1 {
-            width: 30%;
-            height: 60%;
-            background-image: url(../img/jobs/dids/image1.jpg);
-            background-size: 420% auto;
-            @extend %photo;
-            animation: animation-from-left 500ms forwards;
-            
-            
-            &:hover {
-                background-size: 490% auto;
+        height: 180px;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        transition: background 200ms;
+        width: 32%;
+
+        &:hover {
+            background-size: auto 180px;
+
+            a {
+                opacity: 1;
+                transform: scale(1);
+                visibility: visible;
             }
         }
-        .photo2{
-            width: 62.5%;
-            height: 30%;
-            background-image: url(../img/jobs/dids/image2.jpg);
-            background-size: 120% auto;
-            @extend %photo;
-            animation: animation-from-top 500ms forwards;
-            
-            &:hover {
-                background-size: 170% auto;
-            }
+
+        &:nth-child(3n+3) {
+            margin-right: 0;
         }
-        .photo3 {
-            width: 30%;
-            height: 60%;
-            background-image: url(../img/jobs/dids/image4.jpg);
-            background-size: 420% auto;
-            @extend %photo;
-            animation: animation-from-bottom 500ms forwards;
-            
-            &:hover {
-                background-size: 490% auto;
-            }
+
+        &.dids {
+            background-image: url('../img/cases/dids/thumb.png');
         }
-        .photo4 {
-            width: 30%;
-            height: 30%;
-            background-image: url(../img/jobs/dids/image3.jpg);
-            background-size: 260% auto;
-            @extend %photo;
-            animation: animation-from-right 500ms forwards;
-           
-            &:hover {
-                background-size: 330% auto;
-            }
+
+        &.starthink {
+            background-position: left top;
+            background-image: url('../img/cases/starthink/thumb.png');
         }
-        
+
+        a {
+            background: transparentize(black, 0.1);
+            color: white;
+            cursor: zoom-in;
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            text-decoration: none;
+            top: 0;
+            transform: scale(2);
+            transition: all 250ms;
+            visibility: hidden;
+            width: 100%;
+        }
+
+        h3 {
+            color: transparentize(white, 0.1);
+            font-family: $novecento-stack;
+            font-size: 2em;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 50px;
+        }
     }
-    
-    .description-job {
-        width: 450px;
-        float: left;
-        margin: 60px 0 0 20px;
-        
-        
-        li {
-            display: inline;
-            padding-right: 20px;
-            color: $brand-primary;
-            transition: color 600ms;
-            
-            &:hover {
-                color: darken($brand-primary, 20%);
+
+    .case-detail {
+        background: #ff6600;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+
+        .close-detail-button {
+            // background: url('../img/case-detail-back.png') no-repeat center center;
+            background: white;
+            height: 32px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 32px;
+            z-index: 1001;
+        }
+
+        .slider {
+            background-color: white;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            width: 70%;
+        }
+
+        .about {
+            background: #ff6600;
+            height: 100%;
+            padding: 3%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30%;
+
+            h3 {
+                color: white;
+                font-family: $novecento-stack;
+                font-size: 2em;
+                margin: 0;
+
+                span {
+                    // border-bottom: 1px solid white;
+                    display: inline-block;
+                }
+            }
+
+            p {
+                color: white;
             }
         }
-    }   
+    }
+
+    .case-detail {
+        &.dids {
+            .slider {
+                background-image: url('../img/cases/dids/background.png');
+            }
+        }
+    }
 }
 
 #process {

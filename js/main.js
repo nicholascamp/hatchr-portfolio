@@ -6,13 +6,17 @@ $(document).ready(function () {
     var nav = $('nav'),
         navTopPos = nav.position().top;
 
-    $(window).scroll(function () {
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > navTopPos - nav.outerHeight()) {
             nav.addClass('fixed');
         } else {
             nav.removeClass('fixed');
         }
     });
+
+    if (location.hash) {
+        $(window).trigger('scroll');
+    }
 
     var logoPaths = $('#logo path');
     logoPaths.each(function (i, p) {
