@@ -52,8 +52,7 @@ $(document).ready(function () {
         $(this).parent().removeClass('active');
     });
 
-    $('#cases-detail .slider ul').slick({
-        'slide': 'li',
+    $('#cases-detail .slider').slick({
         'autoplay': true
     });
 });

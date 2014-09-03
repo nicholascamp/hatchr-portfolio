@@ -324,6 +324,12 @@ section {
             width: 70%;
         }
 
+        .slide-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         .slick-slider,
         .slick-list,
         .slick-track {
