@@ -271,74 +271,150 @@ section {
             right: 0;
             visibility: visible;
         }
+    }
 
-        .close-button {
-            background: url('../img/case-detail-back.png') no-repeat center center;
-            height: 48px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 48px;
-            z-index: 1001;
+    .case-close-button {
+        background: url('../img/case-detail-back.png') no-repeat center center;
+        bottom: 20px;
+        height: 48px;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        transition: opacity 300ms;
+        width: 100%;
+        z-index: 1001;
+
+        &:hover {
+            opacity: 1;
         }
+    }
 
-        .slider {
-            background-color: white;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            left: 0;
-            padding: 0;
-            position: absolute;
-            top: 0;
-            width: 70%;
-        }
+    .case-about {
+        background: darken($brand-primary, 3);
+        box-shadow: 0 0 0 6px transparentize(black, 0.98),
+                    0 0 0 3px transparentize(black, 0.98),
+                    1px 0 0 0 transparentize(white, 0.95) inset;
+        color: lighten($brand-primary, 45);
+        height: 100%;
+        padding: 2% 3%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
 
-        .slide-content {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .slick-slider,
-        .slick-list,
-        .slick-track {
-            height: 100%;
+        h3 {
+            color: white;
+            font-family: $novecento-stack;
+            font-size: 2.2em;
+            font-weight: normal;
+            line-height: 0.7;
             margin: 0;
-            padding: 0;
-        }
-
-        .slick-slide {
+            padding: 0.5em 0;
             text-align: center;
 
-            img {
+            span {
+                text-transform: lowercase;
+                font-size: 0.45em;
+                color: lighten($brand-primary, 40);
                 display: inline-block;
             }
         }
 
-        .about {
-            background: #ff6600;
-            height: 100%;
-            padding: 3%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 30%;
+        .separator {
+            background: transparentize(white, 0.7);
+            box-shadow: 0 1px 0 0 darken($brand-primary, 5);
+            height: 1px;
+            margin: 1.2em auto;
+            width: 150px;
+        }
 
-            h3 {
-                color: white;
-                font-family: $novecento-stack;
-                font-size: 2em;
-                margin: 0;
+        p {
+            font-size: 1em;
+            margin: 1.2em 0;
+        }
 
-                span {
-                    // border-bottom: 1px solid white;
-                    display: inline-block;
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    .case-external-link {
+        box-shadow: 0 -3px 0 0 transparentize(white, 0.7) inset;
+        color: white;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 5px;
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+
+        &:hover {
+            box-shadow: 0 -30px 0 transparentize(white, 0.6) inset;
+            color: darken($brand-primary, 30);
+        }
+    }
+
+    .slider {
+        background-color: white;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 70%;
+    }
+
+    .slide-content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-slide {
+        text-align: center;
+        padding-bottom: 30px;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    .slick-dots {
+        bottom: 5px;
+
+        li {
+            margin: 0 10px;
+
+            &.slick-active {
+                button {
+                    background: white;
+                    transform: scale(1);
                 }
             }
+        }
 
-            p {
-                color: white;
+        button {
+            background: transparentize(white, 0.7);
+            border-radius: 12px;
+            content: '';
+            height: 12px;
+            margin: 0;
+            transform: scale(0.8);
+            transition: all 150ms;
+            width: 12px;
+
+            &:before {
+                content: '';
             }
         }
     }

@@ -47,12 +47,14 @@ $(document).ready(function () {
         caseDetail.addClass('active');
     });
 
-    $('#cases-detail .close-button').on('click', function (e) {
+    $('#cases-detail .case-close-button').on('click', function (e) {
         e.preventDefault();
-        $(this).parent().removeClass('active');
+        $(this).closest('[data-case]').removeClass('active');
     });
 
     $('#cases-detail .slider').slick({
-        'autoplay': true
+        'autoplay': true,
+        'dots': true,
+        'speed': 500
     });
 });
