@@ -1,6 +1,5 @@
 @import 'partials/normalize';
 @import 'partials/fonts';
-@import 'partials/animation';
 
 @import "vendor/slick";
 
@@ -11,42 +10,6 @@ $menu-height-small: 60px;
 
 $novecento-stack: 'Novecento', sans-serif;
 $open-sans-stack: 'Open Sans', sans-serif;
-
-@keyframes slideFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideFromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 // border-box FTW!
 * {
