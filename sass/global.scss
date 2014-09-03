@@ -1,3 +1,5 @@
+@import "modules/utils";
+
 @import 'partials/normalize';
 @import 'partials/fonts';
 
@@ -174,6 +176,7 @@ section {
 }
 
 #cases {
+    @extend %clearfix;
     margin: 0 auto;
     position: relative;
 
@@ -247,6 +250,10 @@ section {
 }
 
 #cases-detail {
+    height: 0;
+    min-height: 0;
+    width: 0;
+
     article {
         background: #ff6600;
         height: 100%;
