@@ -135,7 +135,7 @@ nav {
         margin-top: -5px;
         transition: all 250ms;
         vertical-align: middle;
-        shape-rendering: crispEdge;
+        stroke-opacity: 0;
     }
 
     &.fixed {
@@ -218,6 +218,10 @@ section {
         &.starthink {
             background-position: left top;
             background-image: url('../img/cases/starthink/thumb.png');
+        }
+        &.familybox {
+            background-position: left top;
+            background-image: url('../img/cases/familybox/thumb.png');
         }
 
         a {
@@ -347,6 +351,7 @@ section {
         position: relative;
         text-decoration: none;
         transition: all 250ms;
+        display: inline-block;
 
         &:hover {
             box-shadow: 0 -30px 0 transparentize(white, 0.6) inset;
@@ -355,6 +360,7 @@ section {
     }
 
     .slider {
+        background-image: url('../img/cases/dids/background.png');
         background-color: white;
         background-position: center center;
         background-repeat: no-repeat;
@@ -419,11 +425,6 @@ section {
         }
     }
 
-    .dids {
-        .slider {
-            background-image: url('../img/cases/dids/background.png');
-        }
-    }
 }
 
 #process {
