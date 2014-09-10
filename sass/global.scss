@@ -432,17 +432,42 @@ section {
     height: auto;
 }
 
-#for-who {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+#para-quem {
+    padding-left: 20%;
+    padding-right: 20%;
+
+    h3 {
+        font-family: $novecento-stack;
+        font-size: 3em;
+        font-weight: normal;
+        text-align: center;
+        margin: 0.5em 0 1em 0;
+    }
 
     article {
-        width: 28%;
-        height: auto;
-        padding: 2.5%;
+        background: darken(white, 0.5);
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px transparentize(black, 0.96) inset;
         float: left;
+        height: 300px;
+        margin-right: 5%;
+        padding: 20px;
         text-align: center;
+        transition: all 250ms;
+        width: 30%;
+
+        &:hover {
+            background: darken(white, 2);
+        }
+
+        &:nth-child(3n+3) {
+            margin-right: 0;
+        }
+    }
+
+    p {
+        color: transparentize(darken($brand-primary, 40), 0.2);
+        font-weight: 600;
     }
 }
 
