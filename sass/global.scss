@@ -435,9 +435,39 @@ section {
     height: auto;
 }
 
+@keyframes building-stripes-animation {
+    25% { transform: translateX(0px) }
+    50% { transform: translateX(1px) }
+    75% { transform: translateX(2px) }
+    100% { transform: translateX(3px) }
+}
+
+@keyframes lamp-gear-animation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes einstein-tongue-animation {
+    0% { transform: translateY(0) }
+    100% { transform: translateY(13px) }
+}
+
 #para-quem {
     padding-left: 20%;
     padding-right: 20%;
+
+    %icon {
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 128px;
+        position: relative;
+        width: 128px;
+    }
+
+    %icon-piece {
+        position: absolute;
+    }
 
     h3 {
         font-family: $novecento-stack;
@@ -459,10 +489,63 @@ section {
 
         &:hover {
             background: darken(white, 2.5);
+
+            .animated-piece {
+                animation-play-state: running !important;
+            }
         }
 
         &:nth-child(3n+3) {
             margin-right: 0;
+        }
+    }
+
+    .building {
+        @extend %icon;
+        background-image: url('../img/para-quem-1.png');
+
+        .stripes {
+            @extend %icon-piece;
+            animation: building-stripes-animation 500ms infinite;
+            animation-play-state: paused;
+            background-image: url('../img/para-quem-1-piece.png');
+            height: 116px;
+            left: 28px;
+            top: 3px;
+            width: 88px;
+        }
+    }
+
+    .lamp {
+        @extend %icon;
+        background-image: url('../img/para-quem-2.png');
+
+        .gear {
+            @extend %icon-piece;
+            animation: lamp-gear-animation 1.2s forwards infinite;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+            background-image: url('../img/para-quem-2-piece.png');
+            height: 51px;
+            width: 51px;
+            left: 39px;
+            top: 15px;
+        }
+    }
+
+    .einstein {
+        @extend %icon;
+        background-image: url('../img/para-quem-3.png');
+
+        .tongue {
+            @extend %icon-piece;
+            animation: einstein-tongue-animation 250ms forwards;
+            animation-play-state: paused;
+            background-image: url('../img/para-quem-3-piece.png');
+            height: 13px;
+            left: 49px;
+            top: 89px;
+            width: 23px;
         }
     }
 
