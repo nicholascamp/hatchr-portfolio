@@ -19,6 +19,21 @@ $(document).ready(function () {
     }
 
     /*
+     * Menu principal
+     * Rolamento suave (e carinhoso) ao clicar nos menus
+     */
+    var navAnchors = $('nav a');
+
+    navAnchors.on('click', function (e) {
+        e.preventDefault();
+        var target = $($(this).attr('href'));
+
+        $('html, body').animate({
+            'scrollTop': target.position().top
+        }, 500);
+    });
+
+    /*
      * Animação de escrita manual da logomarca
      */
     var logoPaths = $('#logo path');
