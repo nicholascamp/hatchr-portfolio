@@ -279,15 +279,18 @@ section {
         background: url('../img/case-detail-back.png') no-repeat center center;
         bottom: 20px;
         height: 48px;
-        left: 0;
+        left: 50%;
+        margin-left: -24px;
         opacity: .5;
         position: absolute;
-        transition: opacity 300ms;
-        width: 100%;
+        transition: opacity 300ms,
+                    transform 500ms;
+        width: 48px;
         z-index: 1001;
 
         &:hover {
             opacity: 1;
+            transform: rotate(90deg);
         }
     }
 
@@ -441,23 +444,21 @@ section {
         font-size: 3em;
         font-weight: normal;
         text-align: center;
-        margin: 0.5em 0 1em 0;
+        margin: 0.5em 0 1.25em 0;
     }
 
     article {
-        background: darken(white, 0.5);
         border-radius: 5px;
-        box-shadow: 0 0 0 1px transparentize(black, 0.96) inset;
         float: left;
-        height: 300px;
         margin-right: 5%;
         padding: 20px;
         text-align: center;
         transition: all 250ms;
         width: 30%;
+        height: 300px;
 
         &:hover {
-            background: darken(white, 2);
+            background: darken(white, 2.5);
         }
 
         &:nth-child(3n+3) {
@@ -466,8 +467,9 @@ section {
     }
 
     p {
-        color: transparentize(darken($brand-primary, 40), 0.2);
+        color: darken($brand-primary, 30);
         font-weight: 600;
+        word-wrap: break-word;
     }
 }
 
