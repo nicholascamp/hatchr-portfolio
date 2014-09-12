@@ -29,11 +29,11 @@ $(document).ready(function () {
         var target = $(this),
             hash = target.attr('href');
 
-        location.hash = hash;
-
         $('html, body').animate({
             'scrollTop': $(hash).position().top
-        }, 500);
+        }, 500, function () {
+            location.hash = hash;
+        });
     });
 
     /*
