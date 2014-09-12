@@ -435,11 +435,8 @@ section {
 
 }
 
-#process {
-    background-color: #ff6600;
-    text-align: center;
-    width: 100%;
-    height: auto;
+#processo {
+    background: $brand-primary url('../img/processo.png') no-repeat center 80px;
 }
 
 @keyframes building-stripes-animation {
