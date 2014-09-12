@@ -75,4 +75,17 @@ $(document).ready(function () {
         'dots': true,
         'speed': 500
     });
+
+    /*
+     * Envio assíncrono do formulário de contato
+     */
+    $('#contato form').on('submit', function (e) {
+        e.preventDefault();
+        var form = $(this),
+            successMsg = form.parent().find('.success-message');
+
+        form.addClass('hidden');
+        successMsg.addClass('shown');
+        $.post(form.attr('action'), form.serialize());
+    });
 });

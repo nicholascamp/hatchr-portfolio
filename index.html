@@ -251,26 +251,42 @@
     <section id="contato">
         <h3>
             Interessado no nosso trabalho?
-            <span>Nos conte mais sobre sua idéia ou projeto, e vamos marcar um café!</span>
+            <span>Nos conte mais sobre sua idéia ou projeto e vamos marcar um café!</span>
         </h3>
         <div class="separator"></div>
-        <form action="">
+        <form action="https://hatchrbr.wufoo.com/forms/zobkqqy0d8wdob/#public" method="POST">
+            <input type="hidden" id="idstamp" name="idstamp" value="1f3+56XdFZoRi5/N0GLh61J1yhRqPCRIO6QUwrLZBsA=">
             <p>
-                <label for="name">Nome</label>
-                <input type="text" name="name" required>
+                <label>
+                    Nome
+                    <span>*</span>
+                    <input type="text" name="Field6" maxlength="255" tabindex="1" required>
+                </label>
             </p>
             <p>
-                <label for="email">Email</label>
-                <input type="email" name="email" required>
+                <label>
+                    Email
+                    <span>*</span>
+                    <input type="email" name="Field5" maxlength="255" tabindex="2" required>
+                </label>
             </p>
             <p>
-                <label for="message">Fale um pouco sobre a sua idéia</label>
-                <textarea name="message" required></textarea>
+                <label>
+                    Fale um pouco sobre a sua idéia
+                    <span>*</span>
+                    <textarea name="Field7" tabindex="3" required></textarea>
+                </label>
             </p>
             <p>
-                <input type="submit" value="Enviar">
+                <input type="submit" name="saveForm" value="Enviar">
+            </p>
+            <p style="display:none;">
+                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
             </p>
         </form>
+        <div class="success-message">
+            Obrigado!
+        </div>
     </section>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

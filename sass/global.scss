@@ -488,9 +488,9 @@ section {
     }
 
     article {
-        background: darken(white, 2);
+        background: darken(white, 3);
         border-radius: 3px;
-        box-shadow: 0 0 0 2px darken(white, 5) inset;
+        box-shadow: 0 0 0 2px darken(white, 8) inset;
         float: left;
         height: 320px;
         padding: 30px 20px;
@@ -514,6 +514,7 @@ section {
         }
 
         &:nth-child(2) {
+            background: darken(white, 2);
             padding: 45px 20px;
             height: 350px;
             margin-top: -15px;
@@ -589,7 +590,7 @@ section {
 
     h3 {
         font-family: $novecento-stack;
-        margin-top: 0;
+        // margin-top: 0;
         font-size: 2.2em;
         font-weight: normal;
         text-align: center;
@@ -606,6 +607,10 @@ section {
     form {
         width: 500px;
         margin: 0 auto;
+
+        &.hidden {
+            display: none;
+        }
     }
 
     label {
@@ -621,7 +626,8 @@ section {
         background: transparent;
         border: 1px solid white;
         color: white;
-        padding: 5px 10px;
+        padding: 5px;
+        transition: background 150ms;
         width: 100%;
 
         &:active,
@@ -637,5 +643,22 @@ section {
         color: $brand-primary;
         font-weight: bold;
         text-transform: uppercase;
+    }
+
+    .success-message {
+        border-radius: 5px;
+        font-size: 1.5em;
+        margin: 0 auto;
+        opacity: 0;
+        text-align: center;
+        transition: all 500ms;
+        visibility: hidden;
+        width: 500px;
+
+        &.shown {
+            line-height: 280px;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
