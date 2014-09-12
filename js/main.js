@@ -26,10 +26,13 @@ $(document).ready(function () {
 
     navAnchors.on('click', function (e) {
         e.preventDefault();
-        var target = $($(this).attr('href'));
+        var target = $(this),
+            hash = target.attr('href');
+
+        location.hash = hash;
 
         $('html, body').animate({
-            'scrollTop': target.position().top
+            'scrollTop': $(hash).position().top
         }, 500);
     });
 
