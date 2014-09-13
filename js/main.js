@@ -76,6 +76,8 @@ $(document).ready(function () {
         'speed': 500
     });
 
+    $(".nano").nanoScroller();
+
     /*
      * Envio assíncrono do formulário de contato
      */
