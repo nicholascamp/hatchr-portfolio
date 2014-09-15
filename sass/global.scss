@@ -13,6 +13,7 @@ $menu-height-small: 60px;
 
 $novecento-stack: 'Novecento', sans-serif;
 $open-sans-stack: 'Open Sans', sans-serif;
+$georgia-stack: Georgia, Times, "Times New Roman", serif;
 
 // border-box FTW!
 * {
@@ -49,6 +50,22 @@ h2 {
     font-family: $novecento-stack;
     font-weight: normal;
     margin: 0;
+}
+
+h3 {
+    font-family: $novecento-stack;
+    font-size: 2.5em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0;
+
+    span {
+        color: lighten(black, 50);
+        display: block;
+        font-family: Georgia;
+        font-size: 0.5em;
+        font-weight: normal;
+    }
 }
 
 .wrapper {
@@ -246,16 +263,11 @@ section {
             visibility: hidden;
             width: 100%;
         }
+    }
 
-        h3 {
-            color: white;
-            font-family: $novecento-stack;
-            font-size: 2em;
-            font-weight: normal;
-            margin-bottom: 10px;
-            margin-top: 50px;
-            text-align: center;
-        }
+    h3 {
+        font-size: 2em;
+        margin-top: 50px;
     }
 }
 
@@ -314,35 +326,32 @@ section {
         right: 0;
         top: 0;
         width: 30%;
+    }
 
-        h3 {
-            color: white;
-            font-family: $novecento-stack;
-            font-size: 2.2em;
-            font-weight: normal;
-            line-height: 0.7;
-            margin: 10% 0 5% 0;
-            padding: 0;
-            text-align: center;
+    h3 {
+        color: white;
+        font-size: 2.2em;
+        margin: 8% 0 5% 0;
+        text-align: center;
 
-            span {
-                text-transform: lowercase;
-                font-size: 0.45em;
-                color: lighten($brand-primary, 40);
-                display: inline-block;
-            }
-        }
-
-        .separator {
-            background: transparentize(white, 0.7);
-            height: 2px;
-            margin: 8% auto;
-            width: 100px;
-        }
-
-        strong {
+        span {
+            color: lighten($brand-primary, 40);
+            font-family: $open-sans-stack;
             font-weight: 600;
+            font-size: 0.45em;
+            text-transform: uppercase;
         }
+    }
+
+    .separator {
+        background: transparentize(white, 0.7);
+        height: 2px;
+        margin: 8% auto;
+        width: 100px;
+    }
+
+    strong {
+        font-weight: 600;
     }
 
     .case-about-text {
@@ -488,59 +497,41 @@ section {
         position: absolute;
     }
 
-    h3 {
-        font-family: $novecento-stack;
-        font-size: 3em;
-        font-weight: normal;
-        text-align: center;
-        margin: 0.5em 0 1.25em 0;
+    .separator {
+        background-color: darken(white, 10);
+        margin: 1em 0 4em 0;
     }
 
     article {
-        background: darken(white, 3);
+        background: darken(white, 4);
         border-radius: 3px;
-        box-shadow: 0 0 0 2px darken(white, 8) inset;
+        box-shadow: 0 0 0 2px darken(white, 8);
         float: left;
-        height: 320px;
-        padding: 30px 20px;
+        height: 300px;
+        margin-right: 2%;
+        padding: 3% 2.5%;
         text-align: center;
-        transition: all 250ms;
-        width: 33.3333333%;
-        position: relative;
+        transition: background 500ms;
+        width: 32%;
 
         &:hover {
-            background: white;
+            background: darken(white, 1);
 
             .animated-piece {
                 animation-play-state: running !important;
             }
         }
 
-        &:first-child {
-            margin-right: -10px;
-            padding-right: 30px;
-            z-index: 0;
-        }
-
-        &:nth-child(2) {
-            background: darken(white, 2);
-            padding: 45px 20px;
-            height: 350px;
-            margin-top: -15px;
-            z-index: 1;
-        }
-
-        &:last-child {
-            margin-left: -10px;
-            padding-left: 30px;
-            z-index: 0;
+        &:nth-child(3n+3) {
+            margin-right: 0;
         }
     }
 
     p {
-        color: lighten(black, 40);
-        font-size: 1.02em;
-        word-wrap: break-word;
+        color: darken(white, 60);
+        font-family: $georgia-stack;
+        font-size: 1.1em;
+        margin: 1em 0;
     }
 
     .building {
@@ -598,18 +589,12 @@ section {
     color: white;
 
     h3 {
-        font-family: $novecento-stack;
-        // margin-top: 0;
-        font-size: 2.2em;
-        font-weight: normal;
         text-align: center;
 
         span {
-            display: block;
-            font-size: 0.6em;
-            line-height: .8;
             color: lighten($brand-primary, 40);
             font-family: $open-sans-stack;
+            font-size: 0.6em;
         }
     }
 
