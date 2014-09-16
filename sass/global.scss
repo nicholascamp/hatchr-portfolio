@@ -126,32 +126,44 @@ nav {
     transition: all 250ms ease-in-out;
 
     ul {
+        display: inline-block;
         margin: 0;
         padding: 0;
     }
 
     li {
-        display: inline-block;
+        color: white;
+        float: left;
+        font-weight: normal;
+        overflow: hidden;
+        position: relative;
+        transition: all 200ms;
+
+        &:before {
+            background: $brand-primary;
+            bottom: 0;
+            content: '';
+            height: $menu-height-small;
+            left: 0;
+            position: absolute;
+            transform: translateY(-$menu-height);
+            transition: 200ms all;
+            width: 100%;
+            z-index: -1;
+        }
     }
 
     a {
-        color: white;
+        color: inherit;
         display: block;
-        font-weight: normal;
         padding: 0 30px;
         text-decoration: none;
-        transition: all 150ms;
-
-        &:hover {
-            transform: translateY(-5px);
-        }
     }
 
     #logo {
         margin-top: -5px;
         transition: all 250ms;
         vertical-align: middle;
-        // stroke-opacity: 0;
     }
 
     &.fixed {
@@ -166,10 +178,6 @@ nav {
         width: 100%;
         z-index: 1000;
 
-        a {
-            color: $brand-primary;
-        }
-
         #logo {
             height: 30px;
             width: auto;
@@ -177,11 +185,28 @@ nav {
             path {
                 animation: none;
                 fill: $brand-primary;
-                stroke: $brand-primary;
                 shape-rendering: crispEdge;
-
+                stroke: $brand-primary;
+                transition: none;
             }
         }
+
+        li:not(.logo) {
+            color: $brand-primary;
+
+            &.active,
+            &:hover {
+                color: white !important;
+
+                &:before {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    &:not(.fixed) {
+
     }
 }
 
@@ -459,6 +484,11 @@ section {
 #processo {
     background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
     background-size: cover;
+    text-align: center;
+
+    img {
+        margin-top: 5%;
+    }
 }
 
 @keyframes building-stripes-animation {
