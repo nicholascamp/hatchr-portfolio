@@ -486,8 +486,14 @@ section {
     background-size: cover;
     text-align: center;
 
-    img {
-        margin-top: 5%;
+    h3 {
+        color: white;
+
+        span {
+            color: lighten($brand-primary, 40);
+            font-family: $open-sans-stack;
+            font-size: 0.66em;
+        }
     }
 }
 
