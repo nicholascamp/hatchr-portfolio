@@ -457,7 +457,8 @@ section {
 }
 
 #processo {
-    background: $brand-primary url('../img/processo.png') no-repeat center 80px;
+    background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
+    background-size: cover;
 }
 
 @keyframes building-stripes-animation {

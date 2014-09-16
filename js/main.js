@@ -1,3 +1,31 @@
+$.fn.parallax = function () {
+    var targets = $(this);
+
+    $(window).on('scroll', function() {
+        targets.each(function() {
+            var elem, speed;
+
+            elem = $(this);
+            speed = elem.attr('data-speed');
+            direction = elem.attr('data-direction');
+
+            if (!direction) {
+                direction = 'to top';
+            }
+
+            var yPos;
+            yPos = -($(window).scrollTop() - elem.offset().top) / speed;
+
+            if (direction == 'to bottom')
+                yPos = -yPos;
+
+            elem.css('background-position', 'center ' + yPos + 'px');
+        });
+    });
+
+    $(window).trigger('scroll');
+};
+
 $(document).ready(function () {
     /*
      * Menu principal
@@ -77,6 +105,11 @@ $(document).ready(function () {
     });
 
     $(".nano").nanoScroller();
+
+    /*
+     * Efeito Parallax
+     */
+    $('[data-speed]').parallax();
 
     /*
      * Envio assíncrono do formulário de contato
