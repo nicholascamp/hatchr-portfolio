@@ -107,6 +107,19 @@ $(document).ready(function () {
     $(".nano").nanoScroller();
 
     /*
+     * Animação do caminho do processo
+     */
+    var processPath = $('#processo path'),
+        processPathLength = processPath.get(0).getTotalLength();
+
+    processPath.attr('stroke-dasharray', processPathLength + ' ' + processPathLength);
+    processPath.attr('stroke-dashoffset', processPathLength);
+    processPath.get(0).getBoundingClientRect();
+
+    processPath.css('transition', 'stroke-dashoffset 3s linear');
+    processPath.attr('stroke-dashoffset', 0);
+    
+    /*
      * Efeito Parallax
      */
     $('[data-speed]').parallax();
