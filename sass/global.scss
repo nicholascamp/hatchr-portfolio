@@ -491,11 +491,20 @@ section {
     }
 }
 
+@keyframes processFeedbackLine {
+    from {
+        width: 0; 
+    }
+
+    to {
+        width: 851px;
+    }
+}
+
 #processo {
     background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
     background-size: cover;
     text-align: center;
-    
 
     h3 {
         color: white;
@@ -510,7 +519,7 @@ section {
     .processo-path {
         width: 915px;
         position: relative;
-        margin: 180px auto 0;
+        margin: 120px auto 0;
     }
     
     .dots {
@@ -561,6 +570,88 @@ section {
             top: -25px;
             left: 880px;
         }
+    }
+    
+    %animated-icon {
+        animation: processoDotAnimation 300ms forwards; 
+        transform: scale(0);
+        width: 211px;
+        height: 91px;
+        position: absolute;
+    }
+    
+    .ideia{
+        animation-delay: 100ms;
+        @extend %animated-icon;
+        top: -40px;
+        left: -80px;
+        background: url('../img/processo/ideia.png') no-repeat center center;
+    }
+    
+    .telas{
+        animation-delay: 700ms;
+        @extend %animated-icon;
+        top: 28px;
+        left: 120px;
+        background: url('../img/processo/telas.png') no-repeat center center;
+    }
+    
+    .wireframes{
+        animation-delay: 1350ms;
+        @extend %animated-icon;
+        top: -20px;
+        left: 380px;
+        background: url('../img/processo/wireframes.png') no-repeat center center;
+    }
+    
+    .dev{
+        animation-delay: 2100ms;
+        @extend %animated-icon;
+        top: 130px;
+        left: 450px;
+        background: url('../img/processo/desenvolvimento.png') no-repeat center center;
+    }
+    
+    .entrega{
+        animation-delay: 3000ms;
+        @extend %animated-icon;
+        top: -60px;
+        left: 700px;
+        background: url('../img/processo/entrega.png') no-repeat center center;
+    }
+    
+    .feedback {
+        @extend %animated-icon;
+        animation-delay: 3800ms;
+        width: 107px;
+        height: 40px;
+        top: 255px;
+        left: 407px;
+        background: url('../img/processo/feedback.png') no-repeat center center;
+        z-index: 10;
+    }
+    
+    .bee {
+        @extend %animated-icon;
+        animation-delay: 5100ms;
+        width: 19px;
+        height: 19px;
+        top: 92px;
+        left: 35px;
+        background: url('../img/processo/bee.png') no-repeat center center;
+        z-index: 10;
+        
+    }
+    
+    .line-return {
+        animation: processFeedbackLine 1900ms forwards; 
+        animation-delay: 3300ms;
+        width: 0;
+        height: 262px;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        background: url('../img/processo/line-return.png') no-repeat right center;
     }
 }
 
