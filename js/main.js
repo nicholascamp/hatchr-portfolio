@@ -65,6 +65,23 @@ $(document).ready(function () {
     });
 
     /*
+     * Track Scroll
+     * Detecta se o usuário está atualmente vendo o elemento em questão, se sim
+     * adiciona uma classe no elemento para sinalizar
+     */
+    var trackScrollElems = $('.track-scroll'),
+        trackScrollOffset = 200;
+
+    $(window).on('scroll', function (e) {
+        var scrollTop = $(this).scrollTop() + trackScrollOffset;
+        trackScrollElems.each(function () {
+            if (scrollTop >= $(this).position().top) {
+                $(this).addClass('track-scroll-focused');
+            }
+        });
+    });
+
+    /*
      * Animação de escrita manual da logomarca
      */
     var logoPaths = $('#logo path');
@@ -117,8 +134,7 @@ $(document).ready(function () {
     processPath.get(0).getBoundingClientRect();
 
     processPath.css('transition', 'stroke-dashoffset 3s linear');
-    processPath.attr('stroke-dashoffset', 0);
-    
+
     /*
      * Efeito Parallax
      */

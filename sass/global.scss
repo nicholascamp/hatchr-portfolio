@@ -485,7 +485,7 @@ section {
     from {
         transform: scale(0);
     }
-    
+
     to {
         transform: scale(1);
     }
@@ -493,7 +493,7 @@ section {
 
 @keyframes processFeedbackLine {
     from {
-        width: 0; 
+        width: 0;
     }
 
     to {
@@ -506,6 +506,20 @@ section {
     background-size: cover;
     text-align: center;
 
+    * { animation-play-state: paused; }
+    path { visibility: hidden; }
+
+    &.track-scroll-focused {
+        * {
+            animation-play-state: running;
+        }
+
+        path {
+            visibility: visible;
+            stroke-dashoffset: 0 !important;
+        }
+    }
+
     h3 {
         color: white;
 
@@ -515,13 +529,13 @@ section {
             font-size: 0.66em;
         }
     }
-    
+
     .processo-path {
         width: 915px;
         position: relative;
         margin: 120px auto 0;
     }
-    
+
     .dots {
         position: absolute;
         height: 100%;
@@ -529,7 +543,7 @@ section {
         top: 0;
         left: 0;
         margin: 0;
-        
+
         li {
             animation: processoDotAnimation 300ms forwards;
             width: 40px;
@@ -541,85 +555,85 @@ section {
             line-height: 40px;
             transform: scale(0);
         }
-        
+
         .offset-1 {
             animation-delay: 0s;
             top: 35px;
         }
-        
+
         .offset-2 {
             animation-delay: 600ms;
             top: -12px;
             left: 200px;
         }
-        
+
         .offset-3 {
             animation-delay: 1250ms;
             top:62px;
             left: 415px;
         }
-        
+
         .offset-4 {
             animation-delay: 2000ms;
             top: 110px;
             left: 630px;
         }
-        
+
         .offset-5 {
             animation-delay: 2900ms;
             top: -25px;
             left: 880px;
         }
     }
-    
+
     %animated-icon {
-        animation: processoDotAnimation 300ms forwards; 
+        animation: processoDotAnimation 300ms forwards;
         transform: scale(0);
         width: 211px;
         height: 91px;
         position: absolute;
     }
-    
-    .ideia{
-        animation-delay: 100ms;
+
+    .ideia {
         @extend %animated-icon;
+        animation-delay: 100ms;
         top: -40px;
         left: -80px;
         background: url('../img/processo/ideia.png') no-repeat center center;
     }
-    
-    .telas{
-        animation-delay: 700ms;
+
+    .telas {
         @extend %animated-icon;
+        animation-delay: 700ms;
         top: 28px;
         left: 120px;
         background: url('../img/processo/telas.png') no-repeat center center;
     }
-    
-    .wireframes{
-        animation-delay: 1350ms;
+
+    .wireframes {
         @extend %animated-icon;
+        animation-delay: 1350ms;
         top: -20px;
         left: 380px;
         background: url('../img/processo/wireframes.png') no-repeat center center;
     }
-    
-    .dev{
-        animation-delay: 2100ms;
+
+    .dev {
         @extend %animated-icon;
+        animation-delay: 2100ms;
         top: 130px;
         left: 450px;
         background: url('../img/processo/desenvolvimento.png') no-repeat center center;
     }
-    
-    .entrega{
-        animation-delay: 3000ms;
+
+    .entrega {
         @extend %animated-icon;
+        animation-delay: 3000ms;
         top: -60px;
         left: 700px;
         background: url('../img/processo/entrega.png') no-repeat center center;
     }
-    
+
     .feedback {
         @extend %animated-icon;
         animation-delay: 3800ms;
@@ -630,7 +644,7 @@ section {
         background: url('../img/processo/feedback.png') no-repeat center center;
         z-index: 10;
     }
-    
+
     .bee {
         @extend %animated-icon;
         animation-delay: 5100ms;
@@ -640,11 +654,11 @@ section {
         left: 35px;
         background: url('../img/processo/bee.png') no-repeat center center;
         z-index: 10;
-        
+
     }
-    
+
     .line-return {
-        animation: processFeedbackLine 1900ms forwards; 
+        animation: processFeedbackLine 1900ms forwards;
         animation-delay: 3300ms;
         width: 0;
         height: 262px;
