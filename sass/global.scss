@@ -867,33 +867,39 @@ section {
 }
 
 footer {
+    @extend %clearfix;
     width: 100%;
-    background: #ff6600;
-    height: 200px;
+    background: darken($brand-primary, 6.5);
+    border-top: 1px solid darken($brand-primary, 8);
     color: #fff;
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-family: $georgia-stack;
+    padding: 20px 0;
 
     .footer-location {
-         width: 30%;
+         width: 50%;
         float: left;
         text-align: right;
+        padding-right: 60px;
 
         span {
             font-size: 1.2em;
             font-family: $open-sans-stack;
             font-weight: bold;
+            vertical-align: middle;
         }
         img {
+            vertical-align: middle;
             margin-right: 10px;
         }
 
     }
 
     .footer-social-media {
-        width: 30%;
-        margin-right: 20px;
+        width: 50%;
+        padding-left: 60px;
         float: right;
+        border-left: 1px solid #fff;
 
         img {
             vertical-align: middle;
