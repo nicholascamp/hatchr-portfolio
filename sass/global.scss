@@ -865,3 +865,42 @@ section {
         }
     }
 }
+
+footer {
+    width: 100%;
+    background: #ff6600;
+    height: 200px;
+    color: #fff;
+    font-size: 1.7em;
+    font-family: $georgia-stack;
+
+    .footer-location {
+         width: 30%;
+        float: left;
+        text-align: right;
+
+        span {
+            font-size: 1.2em;
+            font-family: $open-sans-stack;
+            font-weight: bold;
+        }
+        img {
+            margin-right: 10px;
+        }
+
+    }
+
+    .footer-social-media {
+        width: 30%;
+        margin-right: 20px;
+        float: right;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
