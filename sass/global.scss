@@ -867,15 +867,16 @@ section {
 }
 
 footer {
+    @extend %clearfix;
     width: 100%;
-    background: #ff6600;
-    height: 200px;
+    background: $brand-primary;
     color: #fff;
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-family: $georgia-stack;
+    padding-bottom: 2%;
 
     .footer-location {
-         width: 30%;
+        width: 40%;
         float: left;
         text-align: right;
 
@@ -891,7 +892,7 @@ footer {
     }
 
     .footer-social-media {
-        width: 30%;
+        width: 40%;
         margin-right: 20px;
         float: right;
 
