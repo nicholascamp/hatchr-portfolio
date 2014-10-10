@@ -264,12 +264,13 @@ section {
         }
 
         &.starthink {
-            background-position: left top;
             background-image: url('../img/cases/starthink/thumb.png');
         }
-        &.familybox {
-            background-position: left top;
-            background-image: url('../img/cases/familybox/thumb.png');
+        &.arpex {
+            background-image: url('../img/cases/arpex/thumb.png');
+        }
+        &.allpet {
+            background-image: url('../img/cases/allpet/thumb.png');
         }
 
         a {
@@ -869,15 +870,14 @@ section {
 footer {
     @extend %clearfix;
     width: 100%;
-    background: darken($brand-primary, 6.5);
-    border-top: 1px solid darken($brand-primary, 8);
+    background: $brand-primary;
     color: #fff;
     font-size: 1.2em;
     font-family: $georgia-stack;
-    padding: 20px 0;
+    padding-bottom: 2%;
 
     .footer-location {
-         width: 50%;
+        width: 40%;
         float: left;
         text-align: right;
         padding-right: 60px;
@@ -896,10 +896,9 @@ footer {
     }
 
     .footer-social-media {
-        width: 50%;
-        padding-left: 60px;
+        width: 40%;
+        margin-right: 20px;
         float: right;
-        border-left: 1px solid #fff;
 
         img {
             vertical-align: middle;
