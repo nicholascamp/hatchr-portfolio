@@ -264,12 +264,13 @@ section {
         }
 
         &.starthink {
-            background-position: left top;
             background-image: url('../img/cases/starthink/thumb.png');
         }
-        &.familybox {
-            background-position: left top;
-            background-image: url('../img/cases/familybox/thumb.png');
+        &.arpex {
+            background-image: url('../img/cases/arpex/thumb.png');
+        }
+        &.allpet {
+            background-image: url('../img/cases/allpet/thumb.png');
         }
 
         a {
@@ -879,13 +880,16 @@ footer {
         width: 40%;
         float: left;
         text-align: right;
+        padding-right: 60px;
 
         span {
             font-size: 1.2em;
             font-family: $open-sans-stack;
             font-weight: bold;
+            vertical-align: middle;
         }
         img {
+            vertical-align: middle;
             margin-right: 10px;
         }
 
