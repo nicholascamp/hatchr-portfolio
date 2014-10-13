@@ -321,6 +321,13 @@ section {
         }
     }
 
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
     .case-close-button {
         background: url('../img/case-detail-back.png') no-repeat center center;
         bottom: 20px;
