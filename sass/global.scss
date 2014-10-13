@@ -236,7 +236,7 @@ section {
         box-shadow: 0 0 2px 0 transparentize(black, 0.95);
         border-radius: 4px;
         float: left;
-        height: 180px;
+        height: 200px;
         margin-bottom: 2%;
         margin-right: 2%;
         overflow: hidden;
@@ -246,7 +246,7 @@ section {
         width: 32%;
 
         &:hover {
-            background-size: auto 180px;
+            background-size: auto 210px;
 
             a {
                 opacity: 1;
@@ -262,7 +262,6 @@ section {
         &.dids {
             background-image: url('../img/cases/dids/thumb.png');
         }
-
         &.starthink {
             background-image: url('../img/cases/starthink/thumb.png');
         }
@@ -288,12 +287,24 @@ section {
             transition: all 250ms;
             visibility: hidden;
             width: 100%;
+
+            &.your-case {
+                background: transparent;
+                color: #939393;
+                opacity: .5;
+                transform: none;
+                visibility: visible;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 
     h3 {
         font-size: 2em;
-        margin-top: 50px;
+        margin-top: 60px;
     }
 }
 
@@ -391,7 +402,7 @@ section {
         max-height: 360px;
 
         .nano-content {
-            padding-right: 14px;
+            padding-right: 24px;
         }
 
         p:first-child {
