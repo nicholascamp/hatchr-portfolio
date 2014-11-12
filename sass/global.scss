@@ -524,16 +524,16 @@ section {
     background-size: cover;
     text-align: center;
 
-    * { animation-play-state: paused; }
-    path { visibility: hidden; }
+    * { animation-play-state: paused !important; }
+    path { visibility: hidden !important; }
 
     &.track-scroll-focused {
         * {
-            animation-play-state: running;
+            animation-play-state: running !important;
         }
 
         path {
-            visibility: visible;
+            visibility: visible !important;
             stroke-dashoffset: 0 !important;
         }
     }
