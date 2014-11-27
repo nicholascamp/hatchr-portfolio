@@ -1,0 +1,2 @@
+# you shall pass!
+User-agent: *
