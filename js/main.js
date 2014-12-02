@@ -108,17 +108,17 @@ $(document).ready(function () {
             caseDetail =  $('#cases-detail [data-case=' + caseID + ']');
 
         caseDetail.addClass('active');
+        caseDetail.find('.slider').slick({
+            'autoplay': true,
+            'pauseOnHover': true,
+            'dots': true,
+            'speed': 500
+        });
     });
 
     $('#cases-detail .case-close-button').on('click', function (e) {
         e.preventDefault();
         $(this).closest('[data-case]').removeClass('active');
-    });
-
-    $('#cases-detail .slider').slick({
-        'autoplay': true,
-        'dots': true,
-        'speed': 500
     });
 
     $(".nano").nanoScroller();
