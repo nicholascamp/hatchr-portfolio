@@ -52,20 +52,21 @@ h2 {
     margin: 0;
 }
 
-h3 {
+.title-section {
     font-family: $novecento-stack;
     font-size: 2.5em;
     font-weight: normal;
     line-height: 1.2;
     margin: 0;
+}
 
-    span {
-        color: lighten(black, 50);
-        display: block;
-        font-family: Georgia;
-        font-size: 0.5em;
-        font-weight: normal;
-    }
+.subtitle-section {
+    color: lighten(black, 50);
+    display: block;
+    font-family: Georgia;
+    font-size: 1.25em;
+    font-weight: normal;
+    margin: 0;
 }
 
 .wrapper {
@@ -84,7 +85,7 @@ header {
     padding-top: 15%;
     width: 100%;
 
-    h2 {
+    h1 {
         font-family: $novecento-stack;
         font-size: 4.7em;
         font-weight: lighter;
@@ -294,6 +295,11 @@ section {
     h3 {
         font-size: 2em;
         margin-top: 50px;
+        font-family: $novecento-stack;
+        font-weight: normal;
+        line-height: 1.2;
+        margin-bottom: 0;
+
     }
 }
 
@@ -365,6 +371,7 @@ section {
         font-size: 2.2em;
         margin: 8% 0 5% 0;
         text-align: center;
+        font-family: $novecento-stack;
 
         span {
             color: lighten($brand-primary, 40);
@@ -372,6 +379,7 @@ section {
             font-weight: 600;
             font-size: 0.45em;
             text-transform: uppercase;
+            display: block;
         }
     }
 
@@ -527,14 +535,14 @@ section {
         }
     }
 
-    h3 {
+    h2 {
         color: white;
-
-        span {
-            color: lighten($brand-primary, 40);
-            font-family: $open-sans-stack;
-            font-size: 0.66em;
-        }
+        font-size: 2.5em;
+    }
+    h3 {
+        color: lighten($brand-primary, 40);
+        font-family: $open-sans-stack;
+        font-size: 1.65em;
     }
 
     .processo-path {
@@ -804,15 +812,17 @@ section {
     background: $brand-primary;
     color: white;
 
-    h3 {
+    h2 {
         text-align: center;
 
-        span {
-            color: lighten($brand-primary, 40);
-            font-family: $open-sans-stack;
-            font-size: 0.6em;
-        }
     }
+    h3 {
+        color: lighten($brand-primary, 40);
+        font-family: $open-sans-stack;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
 
     form {
         width: 500px;
