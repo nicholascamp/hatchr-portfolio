@@ -8,6 +8,8 @@
 
 $brand-primary: #ff6600;
 
+$media-breakpoint-mobile: 480px;
+
 $menu-height: 100px;
 $menu-height-small: 60px;
 
@@ -77,8 +79,8 @@ h2 {
 }
 
 header {
+    background-image: url('../img/bg.png');
     background-color: $brand-primary;
-    background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -86,6 +88,7 @@ header {
     padding-top: 15%;
     width: 100%;
     position: relative;
+    background-attachment: fixed;
 
     h1 {
         font-family: $novecento-stack;
@@ -95,6 +98,11 @@ header {
         text-align: center;
         margin: 0 auto;
         width: 80%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            font-size: 2em;
+            line-height: 1;
+        }
     }
 
     small {
@@ -103,6 +111,10 @@ header {
         font-weight: lighter;
         margin-top: 10px;
         font-size: 75%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: none;
+        }
     }
 
     span {
