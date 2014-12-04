@@ -63,7 +63,7 @@ h2 {
 .subtitle-section {
     color: lighten(black, 50);
     display: block;
-    font-family: Georgia;
+    font-family: $georgia-stack;
     font-size: 1.25em;
     font-weight: normal;
     margin: 0;
@@ -77,6 +77,7 @@ h2 {
 }
 
 header {
+    background-color: $brand-primary;
     background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,31 +85,27 @@ header {
     height: 100%;
     padding-top: 15%;
     width: 100%;
+    position: relative;
 
     h1 {
         font-family: $novecento-stack;
-        font-size: 4.7em;
-        font-weight: lighter;
+        font-size: 3em;
         font-weight: normal;
-        line-height: 1;
+        line-height: 0.8;
+        text-align: center;
         margin: 0 auto;
-        text-align: left;
         width: 80%;
-
-        span {
-            display: block;
-
-            &:first-child {
-                animation: slideFromLeft 1.5s forwards;
-            }
-
-            &:last-child {
-                animation: slideFromRight 1.5s forwards;
-            }
-        }
     }
 
     small {
+        display: block;
+        font-family: $open-sans-stack;
+        font-weight: lighter;
+        margin-top: 10px;
+        font-size: 75%;
+    }
+
+    span {
         display: block;
     }
 }
