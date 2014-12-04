@@ -35,6 +35,10 @@ html,
 body {
     background: #ffffff;
     height: 100%;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        overflow-x: hidden;
+    }
 }
 
 body {
@@ -60,6 +64,11 @@ h2 {
     font-weight: normal;
     line-height: 1.2;
     margin: 0;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
 }
 
 .subtitle-section {
@@ -69,13 +78,22 @@ h2 {
     font-size: 1.25em;
     font-weight: normal;
     margin: 0;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        display: none;
+    }
 }
 
 .wrapper {
+    @extend %clearfix;
     display: block;
     height: auto;
     margin: 0 auto;
     max-width: 1060px;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        width: 100%;
+    }
 }
 
 header {
@@ -89,6 +107,16 @@ header {
     width: 100%;
     position: relative;
     background-attachment: fixed;
+    
+    .logo {
+        display: none;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
 
     h1 {
         font-family: $novecento-stack;
@@ -134,6 +162,11 @@ nav {
     text-align: center;
     text-transform: uppercase;
     transition: all 250ms ease-in-out;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        margin: -200px auto 0 auto;
+        line-height: 1.5;
+    }
 
     ul {
         display: inline-block;
@@ -148,6 +181,14 @@ nav {
         overflow: hidden;
         position: relative;
         transition: all 200ms;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: transparentize(white, .9);
+            margin: 1px 0;
+        }
 
         &:before {
             background: $brand-primary;
@@ -162,7 +203,12 @@ nav {
             z-index: -1;
         }
     }
-
+    
+    .logo {
+        @media (max-width: $media-breakpoint-mobile) {
+            display: none;
+        }
+    }
     a {
         color: inherit;
         display: block;
@@ -224,12 +270,23 @@ section {
     height: 100%;
     min-height: 100%;
     padding-top: $menu-height;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        height: auto;
+        min-height: auto;
+        padding-top: 5%;
+        padding: 5%;
+    }
 
     .separator {
         background: lighten($brand-primary, 30);
         height: 3px;
         width: 100px;
         margin: 3em auto;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            margin: 1.5em auto;
+        }
     }
 }
 
@@ -237,6 +294,8 @@ section {
     @extend %clearfix;
     margin: 0 auto;
     position: relative;
+    
+    
 
     article {
         background-color: #f0f0f0;
@@ -254,6 +313,12 @@ section {
         text-align: center;
         transition: background 200ms;
         width: 32%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            margin: 5% 0;
+            height: 150px;
+        }
 
         &:hover {
             background-size: auto 180px;
@@ -532,6 +597,10 @@ section {
     background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
     background-size: cover;
     text-align: center;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        background-size: cover;
+    }
 
     * { animation-play-state: paused !important; }
     path { visibility: hidden !important; }
@@ -550,6 +619,10 @@ section {
     h2 {
         color: white;
         font-size: 2.5em;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+                font-size: 1.8em;
+            }
     }
     h3 {
         color: lighten($brand-primary, 40);
@@ -719,6 +792,12 @@ section {
 #para-quem {
     padding-left: 19%;
     padding-right: 19%;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 100px;
+    }
 
     %icon {
         background-position: center center;
@@ -727,6 +806,16 @@ section {
         height: 128px;
         position: relative;
         width: 128px;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 64px;
+            height: 64px;
+            background-size: cover;
+            float: left;
+            vertical-align: middle;
+            margin: 10% 8% auto 3%;
+            
+        }
     }
 
     %icon-piece {
@@ -736,6 +825,10 @@ section {
     .separator {
         background-color: darken(white, 10);
         margin: 1em 0 4em 0;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            margin: 1em 0 1.8em 0;
+        }
     }
 
     article {
@@ -749,6 +842,13 @@ section {
         text-align: center;
         transition: background 500ms;
         width: 32%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: block;
+            width: 100%;
+            margin: 5% 0;
+            height: auto;
+        }
 
         &:hover {
             background: darken(white, 1);
@@ -768,6 +868,13 @@ section {
         font-family: $georgia-stack;
         font-size: 1.1em;
         margin: 1em 0;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            float: left;
+            width: 65%;
+            text-align: left;
+            vertical-align: middle;
+        }
     }
 
     .building {
@@ -783,6 +890,14 @@ section {
             left: 28px;
             top: 3px;
             width: 88px;
+            
+            @media (max-width: $media-breakpoint-mobile) {
+                height: 56px;
+                width: 44px;
+                top: 1.5px;
+                left: 14px;
+                background-size: cover;
+            }
         }
     }
 
@@ -800,6 +915,14 @@ section {
             width: 51px;
             left: 39px;
             top: 15px;
+            
+            @media (max-width: $media-breakpoint-mobile) {
+                height: 25px;
+                width: 25px;
+                left: 20px;
+                top: 7px;
+                background-size: cover;
+            }
         }
     }
 
@@ -816,6 +939,10 @@ section {
             left: 49px;
             top: 89px;
             width: 23px;
+            
+            @media (max-width: $media-breakpoint-mobile) {
+                display: none;
+            }
         }
     }
 }
@@ -826,6 +953,10 @@ section {
 
     h2 {
         text-align: center;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            font-size: 1.8em;
+        }
 
     }
     h3 {
@@ -839,6 +970,10 @@ section {
     form {
         width: 500px;
         margin: 0 auto;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+        }
 
         &.hidden {
             display: none;
@@ -903,12 +1038,32 @@ footer {
     font-size: 1.2em;
     font-family: $georgia-stack;
     padding-bottom: 2%;
+    
+    @media (max-width: $media-breakpoint-mobile) {
+        text-align: center;
+        height: 100%;        
+    }
 
     .footer-location {
         width: 40%;
         float: left;
         text-align: right;
         padding-right: 60px;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            margin: 10px 0;
+            text-align: center;
+            padding-right: 0;
+            
+            &:after {
+                content: "";
+                width: 100%;
+                height: 250px;
+                display: block;
+                background-color: darken($brand-primary, 8);
+            }
+        }
 
         span {
             font-size: 1.2em;
@@ -927,6 +1082,11 @@ footer {
         width: 40%;
         margin-right: 20px;
         float: right;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            margin-right: 0;
+        }
 
         img {
             vertical-align: middle;
