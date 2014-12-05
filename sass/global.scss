@@ -605,6 +605,53 @@ section {
     
     @media (max-width: $media-breakpoint-mobile) {
         background-size: cover;
+        height: 100%;
+    }
+    
+    .processo-mobile {
+        display: none;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: block;
+        }
+        
+        li {
+            text-align: left;
+            font-size: 1em;
+            color: #fff;
+
+            /*&:after {
+                width: 30%;
+                height: 3px;
+                content: "";
+                background-color: #fff;
+                vertical-align: middle;
+                display: inline-block;
+                position: relative;
+            }*/
+            
+            &.feedback-process {
+                color: #aa4400;
+                font-size: 1.2em;
+                font-weight: 400;
+                
+                span {
+                    border: 3px solid #aa4400;
+                }
+            }
+        }
+
+        span {
+            border: 3px solid #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            line-height: 35px;
+            margin: 10px;
+            font-size: 1.4em;
+            display: inline-block;
+            text-align: center;
+        }
     }
 
     * { animation-play-state: paused !important; }
@@ -643,20 +690,6 @@ section {
         
         @media (max-width: $media-breakpoint-mobile) {
             display: none;
-        }
-    }
-    
-    .processo-mobile {
-        
-        li {
-            border: 3px solid #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 40px;
-            line-height: 35px;
-            font-size: 1.4em;
-            color: #fff;
-            margin: 10px 0 0;
         }
     }
 
