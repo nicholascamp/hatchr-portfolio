@@ -66,6 +66,7 @@ h2 {
     margin: 0;
     
     @media (max-width: $media-breakpoint-mobile) {
+        text-align: left;
         font-size: 1.8em;
         margin-top: 20px;
     }
@@ -378,6 +379,10 @@ section {
         margin-bottom: 0;
 
     }
+    .you-project {
+        color: lighten(black, 70);   
+        font-size: 0.8em;
+    }
 }
 
 #cases-detail {
@@ -621,8 +626,9 @@ section {
         font-size: 2.5em;
         
         @media (max-width: $media-breakpoint-mobile) {
-                font-size: 1.8em;
-            }
+            text-align: left;
+            font-size: 1.8em;
+        }
     }
     h3 {
         color: lighten($brand-primary, 40);
@@ -634,6 +640,24 @@ section {
         width: 915px;
         position: relative;
         margin: 120px auto 0;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            display: none;
+        }
+    }
+    
+    .processo-mobile {
+        
+        li {
+            border: 3px solid #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            line-height: 35px;
+            font-size: 1.4em;
+            color: #fff;
+            margin: 10px 0 0;
+        }
     }
 
     .dots {
@@ -955,6 +979,7 @@ section {
         text-align: center;
         
         @media (max-width: $media-breakpoint-mobile) {
+            text-align: left;
             font-size: 1.8em;
         }
 
@@ -1041,7 +1066,7 @@ footer {
     
     @media (max-width: $media-breakpoint-mobile) {
         text-align: center;
-        height: 100%;        
+        height: auto;        
     }
 
     .footer-location {
@@ -1061,7 +1086,9 @@ footer {
                 width: 100%;
                 height: 250px;
                 display: block;
-                background-color: darken($brand-primary, 8);
+                background-image: url(../img/location-map-hatchr.png);
+                background-repeat: no-repeat;
+                background-position: center center;
             }
         }
 
