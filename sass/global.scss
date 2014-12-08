@@ -351,6 +351,9 @@ section {
         &.crivs {
             background-image: url('../img/cases/crivs/case-mvp-crivs-startup.png');
         }
+        &.hads {
+            background-image: url('../img/cases/hads/mvp-startup-monetizacao-blog.png');
+        }
 
         a {
             background: transparentize($brand-primary, 0.2);
@@ -377,11 +380,6 @@ section {
         font-weight: normal;
         line-height: 1.2;
         margin-bottom: 0;
-
-    }
-    .you-project {
-        color: lighten(black, 70);   
-        font-size: 0.8em;
     }
 }
 
@@ -507,6 +505,28 @@ section {
         &:hover {
             box-shadow: 0 -30px 0 transparentize(white, 0.6) inset;
             color: darken($brand-primary, 30);
+        }
+    }
+    
+    .store-btn {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 5px;
+        vertical-align: bottom;
+        
+        &:hover {
+            opacity: 0.9;
+        }
+    
+        &.apple {
+            background-image: url(../img/apple-store-tbn.png);
+        }
+
+        &.play {
+            background-image: url(../img/play-store-btn.png);
         }
     }
 
