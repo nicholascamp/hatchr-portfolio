@@ -115,10 +115,16 @@ $(document).ready(function () {
             'speed': 500
         });
     });
+    
+    $('.case-about .case-info-button').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('active');
+    });
 
     $('#cases-detail .case-close-button').on('click', function (e) {
         e.preventDefault();
         $(this).closest('[data-case]').removeClass('active');
+         $(this).parent().removeClass('active');
     });
 
     $(".nano").nanoScroller();

@@ -374,7 +374,7 @@ section {
     }
 
     h3 {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-top: 50px;
         font-family: $novecento-stack;
         font-weight: normal;
@@ -430,6 +430,33 @@ section {
             opacity: 1;
             transform: rotate(90deg);
         }
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            left: 95%;
+            top: 5px;
+            width: 36px;
+            height: 36px;
+            background-size: cover;
+            opacity: .8;  
+        }  
+    }
+    
+    .case-info-button {
+        display: none;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            background: url('../img/case-detail-info.png') no-repeat center center;
+            position: absolute;
+            z-index: 1001;
+            display: block;
+            left: 5px;
+            top: 5px;
+            width: 36px;
+            height: 36px;
+            background-size: cover;
+            opacity: .8;
+            
+        }
     }
 
     .case-about {
@@ -444,6 +471,17 @@ section {
         right: 0;
         top: 0;
         width: 30%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            height: 25%;
+            overflow: hidden;
+            transition: height 300ms;
+            
+            &.active {
+                height: 100%;   
+            }
+        }
     }
 
     h3 {
@@ -452,6 +490,10 @@ section {
         margin: 8% 0 5% 0;
         text-align: center;
         font-family: $novecento-stack;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            font-size: 1.4em;
+        }
 
         span {
             color: lighten($brand-primary, 40);
@@ -460,6 +502,12 @@ section {
             font-size: 0.45em;
             text-transform: uppercase;
             display: block;
+            
+            @media (max-width: $media-breakpoint-mobile) {
+            font-size: 0.6em;
+        }
+            
+            
         }
     }
 
@@ -477,6 +525,10 @@ section {
     .case-about-text {
         margin: 8% 0 4% 0;
         max-height: 360px;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            height: 280px !important;
+        }
 
         .nano-content {
             padding-right: 14px;
@@ -541,6 +593,20 @@ section {
         position: absolute;
         top: 0;
         width: 70%;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 75% !important;
+            top: auto;
+            min-height: 75%;
+
+            img {
+                max-width: 100%;    
+            }
+        }
     }
 
     .slide-content {
@@ -619,6 +685,7 @@ section {
 }
 
 #processo {
+    @extend %clearfix;
     background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
     background-size: cover;
     text-align: center;
