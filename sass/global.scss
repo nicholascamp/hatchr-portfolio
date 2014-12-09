@@ -1166,6 +1166,10 @@ section {
         transition: all 500ms;
         visibility: hidden;
         width: 500px;
+        
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+        }
 
         &.shown {
             line-height: 280px;
@@ -1243,4 +1247,45 @@ footer {
     a {
         text-decoration: none;
     }
+}
+
+.error-page {
+    background-color: $brand-primary;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+    svg {
+        width: 100%;
+        height: 100%;
+        margin-top: -40px;
+    }
+    
+    h1 {
+        font-family: $novecento-stack;
+        font-size: 8.4em;
+        position: absolute;
+        top: 42%;
+        left: 35%;
+        margin: 0 auto;
+        text-align: center;
+        width: 400px;
+        color: darken($brand-primary, 10);
+        
+        span {
+            font-size: .15em;
+            display: block;
+            color: $brand-primary;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-family: $open-sans-stack;
+        text-align: center;
+        display: block;
+        margin-top: -10px;
+    }
+    
 }
