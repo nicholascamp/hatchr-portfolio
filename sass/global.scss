@@ -354,6 +354,9 @@ section {
         &.hads {
             background-image: url('../img/cases/hads/mvp-startup-monetizacao-blog.jpg');
         }
+        &.your-project {
+            background-image: url('../img/add-case.jpg');
+        }
 
         a {
             background: transparentize($brand-primary, 0.2);
