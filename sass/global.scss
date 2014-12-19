@@ -98,10 +98,11 @@ h2 {
 }
 
 header {
-    background-image: url('../img/bg.png');
+    background-image: url('../img/bg.jpg');
     background-color: $brand-primary;
     background-repeat: no-repeat;
-    background-size: cover;
+    //background-size: cover;
+    background-position: center center;
     color: #fff;
     height: 100%;
     padding-top: 20%;
@@ -586,8 +587,9 @@ section {
     }
 
     .slider {
-        background-image: url('../img/cases/dids/background.png');
-        background-color: white;
+        background-image: radial-gradient(ellipse at center, #ff6600 0%, #da4a02 100%),
+                        url(../img/background-cases-texture.png);
+        background-color: #ff6600;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
