@@ -51,7 +51,7 @@ $(document).ready(function () {
      * Rolamento suave (e carinhoso) ao clicar nos menus
      */
     var sweetScroll = function(e) {
-        
+
         e.preventDefault();
         var target = $(this),
             hash = target.attr('href');
@@ -61,13 +61,13 @@ $(document).ready(function () {
         }, 500, function () {
             location.hash = hash;
         });
-         
+
     }
-    
+
     var navAnchors = $('nav a');
-    
+
     navAnchors.on('click', sweetScroll);
-    
+
     /*
      * Track Scroll
      * Detecta se o usuário está atualmente vendo o elemento em questão, se sim
@@ -107,11 +107,11 @@ $(document).ready(function () {
      * Telas de detalhamento de cases
      */
     var casesClick = $('#cases article a');
-    
+
     casesClick.on('click', function (e) {
         var caseID = $(this).attr('data-case'),
             caseDetail =  $('#cases-detail [data-case=' + caseID + ']');
-        
+
         if(caseID) {
             e.preventDefault();
 
@@ -121,13 +121,13 @@ $(document).ready(function () {
                 'pauseOnHover': true,
                 'dots': true,
                 'speed': 500
-            });  
+            });
         };
-        
+
     });
-    
+
     casesClick.on('click', sweetScroll);
-    
+
     $('.case-about .case-info-button').on('click', function (e) {
         e.preventDefault();
         $(this).parent().toggleClass('active');
@@ -166,8 +166,11 @@ $(document).ready(function () {
         var form = $(this),
             successMsg = form.parent().find('.success-message');
 
+        $.post(form.attr('action'), form.serialize());
         form.addClass('hidden');
         successMsg.addClass('shown');
-        $.post(form.attr('action'), form.serialize());
+
+        // Meta de conversão do Google Analytics
+        ga('send', 'event', 'send-contact');
     });
 });
