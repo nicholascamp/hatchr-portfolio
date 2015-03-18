@@ -180,6 +180,13 @@
                     <img src="img/view.png" alt="">
                 </a>
             </article>
+            
+            <article class="case-thumbnail ocupe" >
+                <a href="#" data-case="ocupe">
+                    <h3>#OcupeUmaPraça</h3>
+                    <img src="img/view.png" alt="">
+                </a>
+            </article>
 
             <article class="case-thumbnail your-project">
                 <a href="#contato">
@@ -646,6 +653,53 @@
             </aside>
         </article>
         
+        <article data-case="ocupe">
+            <section class="slider">
+                <div>
+                    <div class="slide-content">
+                        <img data-lazy="img/cases/ocupe/image1.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-content">
+                        <img data-lazy="img/cases/ocupe/image2.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-content">
+                        <img data-lazy="img/cases/ocupe/image3.png">
+                    </div>
+                </div>
+            </section>
+            <aside class="case-about">
+                <h3>
+                    Ocupe Uma praça
+                    <span>Aplicativo</span>
+                </h3>
+                <div class="separator"></div>
+                <div class="case-about-text nano">
+                    <div class="nano-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit possimus praesentium, earum consequatur similique iure facilis vel iusto saepe fugit.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit quisquam laborum praesentium ea facere corporis consectetur voluptatum, deserunt est, magni exercitationem totam dicta vel expedita obcaecati beatae rerum! Nisi, delectus, est.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis minus asperiores suscipit neque velit!
+                    </p>
+                    </div>
+                </div>
+                <a class="case-external-link" href="http://ocupeumapraca.com.br" target="_blank">
+                    ocupeumapraca.com.br
+                </a>
+                <a href="#" class="case-info-button">
+                <a href="#" class="case-close-button">
+
+                </a>
+            </aside>
+        </article>
+        
     </section>
     <section id="contato">
         <h2 class="title-section">Interessado no nosso trabalho?</h2>
@@ -749,15 +803,18 @@
     
     <!--Tawk.to -->
     <script type="text/javascript">
-        var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/54c7e4b464dee60a7a06a91b/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
+        if($(window).outerWidth() >= 480) {
+            console.log($(window).outerWidth());
+            var $_Tawk_API={},$_Tawk_LoadStart=new Date();
+            (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/54c7e4b464dee60a7a06a91b/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+            })();
+        }
     </script>
     <!--End of Tawk.to Script-->
 

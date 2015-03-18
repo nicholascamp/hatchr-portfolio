@@ -110,13 +110,17 @@ header {
     position: relative;
     background-attachment: fixed;
     
+    @media (max-width: $media-breakpoint-mobile) {
+            padding-top: 10px;
+        }
+    
     .logo {
         display: none;
         
         @media (max-width: $media-breakpoint-mobile) {
             display: block;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
     }
 
@@ -130,7 +134,7 @@ header {
         width: 80%;
         
         @media (max-width: $media-breakpoint-mobile) {
-            font-size: 2em;
+            font-size: 1.6em;
             line-height: 1;
         }
     }
@@ -296,7 +300,7 @@ section {
     @extend %clearfix;
     margin: 0 auto;
     position: relative;
-    
+    height: auto;
     
 
     article {
@@ -360,6 +364,9 @@ section {
         }
         &.kebragelo {
             background-image: url('../img/cases/kebragelo/case-mvp-kebragelo-startup.jpg');
+        }
+        &.ocupe {
+            background-image: url('../img/cases/ocupe/case-mvp-ocupe-startup.jpg');
         }
         &.your-project {
             background-image: url('../img/add-case.jpg');
@@ -707,7 +714,7 @@ section {
     
     @media (max-width: $media-breakpoint-mobile) {
         background-size: cover;
-        height: 100%;
+        min-height: 100%;
     }
     
     .processo-mobile {
