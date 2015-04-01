@@ -5,11 +5,6 @@ import os
 from fabric.api import env
 from fabric.contrib.project import rsync_project
 
-with open('.gitignore') as f:
-	GITIGNORE = [l.strip() for l in f.readlines()
-				if l.strip() and not l.startswith('#')]
-	GITIGNORE.append('.git')
-
 env.user = 'hatchr'
 env.hosts = ['hatchr.com.br']
 
@@ -26,6 +21,6 @@ def upload_project():
 		local_dir=env.local_dir,
 		remote_dir=env.remote_dir,
 		delete=True,
-		exclude=GITIGNORE,
-		extra_opts='--progress'
+		exclude='.git',
+		extra_opts='--progress --exclude-from=.gitignore'
 	)
