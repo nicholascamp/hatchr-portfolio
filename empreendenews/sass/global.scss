@@ -112,7 +112,7 @@ main p {
 .subscribe {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1) inset;
     background: url('../img/bg.jpg') no-repeat center center;
-    padding: 15% 0;
+    padding: 10% 0;
 }
 
 .subscribe form {
@@ -220,4 +220,28 @@ footer {
     font-size: 0.9em;
     margin-bottom: 2em;
     text-align: center;
+}
+
+#subscribe-success {
+    color: white;
+    display: none;
+    display: none;
+    font-size: 1.5em;
+    padding: 10% auto 20% 0;
+    text-align: center;
+
+    p {
+        margin: 0 auto;
+        width: 900px;
+    }
+
+    a {
+        border-bottom: 2px solid transparentize(white, 0.8);
+        color: white;
+        transition: border 300ms;
+
+        &:hover {
+            border-bottom: 2px solid transparentize(white, 0.5);
+        }
+    }
 }

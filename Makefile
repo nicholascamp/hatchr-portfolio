@@ -2,7 +2,7 @@ SASS_DIR = sass
 CSS_DIR	 = css
 JS_DIR = js
 
-SASS_FILES  = $(shell find $(SASS_DIR) -type f -name *.scss)
+SASS_FILES  = $(shell find . -type f -name *.scss)
 SASS_GLOBAL	= $(SASS_DIR)/global.scss
 SASS_TARGET = $(CSS_DIR)/global.css
 

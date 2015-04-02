@@ -25,23 +25,31 @@
     </header>
 
     <section class="subscribe">
-        <form action="http://hatchr.us10.list-manage.com/subscribe/post?u=0e20f9d870c3657a772e09ced&amp;id=708376eaf9" method="POST">
+        <div id="subscribe-do">
+            <form action="http://hatchr.us10.list-manage.com/subscribe/post?u=0e20f9d870c3657a772e09ced&amp;id=708376eaf9" method="POST">
+                <p>
+                    <input class="name" type="text" name="FNAME" placeholder="Seu nome" required>
+                    <input class="email" type="email" name="EMAIL" placeholder="Seu e-mail" required>
+                </p>
+                <p>
+                    <input type="submit" name="subscribe" value="Inscrever-se na newsletter">
+                </p>
+                <p style="display: none;">
+                    <input name="group[3037][8]" value="1" type="checkbox" checked>
+                </p>
+            </form>
+            <div class="learn-more-button">
+                <a href="#learn-more">
+                    Saiba mais sobre o <em>EmpreendeNews</em>
+                    <div class="chevron-down"></div>
+                </a>
+            </div>
+        </div>
+        <div id="subscribe-success">
             <p>
-                <input class="name" type="text" name="FNAME" placeholder="Seu nome" required>
-                <input class="email" type="email" name="EMAIL" placeholder="Seu e-mail" required>
+                Você acabou de se inscrever no EmpreendeNews.<br>
+                Saiba mais sobre a <a href="#">Hatchr</a> e conheça nosso trabalho!
             </p>
-            <p>
-                <input type="submit" name="subscribe" value="Inscrever-se na newsletter">
-            </p>
-            <p style="display: none;">
-                <input name="group[3037][8]" value="1" type="checkbox" checked>
-            </p>
-        </form>
-        <div class="learn-more-button">
-            <a href="#learn-more">
-                Saiba mais sobre o <em>EmpreendeNews</em>
-                <div class="chevron-down"></div>
-            </a>
         </div>
     </section>
 
@@ -67,5 +75,7 @@
         ga('create', 'UA-53928890-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
