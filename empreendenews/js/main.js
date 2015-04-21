@@ -1,10 +1,25 @@
-(function () {
-    var subscribeDo = document.getElementById('subscribe-do'),
-        subscribeSuccess = document.getElementById('subscribe-success');
+(function ($) {
+    var subscribeForm = $('#subscribe-form'),
+        subscribeDo = $('#subscribe-do'),
+        subscribeSuccess = $('#subscribe-success');
+
+    subscribeForm.on('submit', function (e) {
+        e.preventDefault();
+        var form = $(this);
+
+        $.post(
+            form.attr('action'),
+            form.serialize()
+        )
+        .always(function () {
+            location.hash = 'success';
+            location.reload();
+        });
+    });
 
     if (location.hash === '#success') {
-        subscribeDo.style.display = 'none';
-        subscribeSuccess.style.display = 'block';
+        subscribeDo.hide();
+        subscribeSuccess.show();
 
         // Facebook conversion pixel
         (function() {
@@ -24,4 +39,4 @@
             'currency':'BRL'
         }]);
     }
-})();
+})(jQuery);
