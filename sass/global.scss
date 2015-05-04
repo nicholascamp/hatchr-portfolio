@@ -563,43 +563,46 @@ section {
     .case-external-link {
         box-shadow: 0 -3px 0 0 transparentize(white, 0.7) inset;
         color: white;
+        display: inline-block;
         font-size: 1em;
         font-weight: 600;
+        margin-right: 10px;
         padding: 5px;
         position: relative;
         text-decoration: none;
         transition: all 250ms;
-        display: inline-block;
 
         &:hover {
-            box-shadow: 0 -30px 0 transparentize(white, 0.6) inset;
+            box-shadow: 0 -30px 0 transparentize(white, 0.7) inset;
             color: darken($brand-primary, 30);
         }
     }
 
     .store-btn {
-        width: 24px;
-        height: 24px;
+        background: url(../img/store-icons.png) no-repeat left center;
         display: inline-block;
-        background-repeat: no-repeat;
-        background-position: left center;
-        margin-left: 15px;
-        vertical-align: bottom;
-        background-size: cover;
-        background-image: url(../img/store-icons.png);
-        transition: opacity 300ms;
-
-
-        &:hover {
-        }
-
-        &.apple {
-            background-position: -24px 0px;
-        }
+        height: 32px;
+        margin-right: 10px;
+        transition: background 300ms;
+        vertical-align: middle;
+        width: 32px;
+        background-color: transparentize(white, 0.7);
+        border-radius: 2px;
 
         &.play {
             background-position: 0px 0px;
+        }
 
+        &.apple {
+            background-position: -32px 0px;
+        }
+
+        &.windows {
+            background-position: -64px 0px;
+        }
+
+        &:hover {
+            background-color: transparentize(white, 0.8)
         }
     }
 
