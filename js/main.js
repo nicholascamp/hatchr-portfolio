@@ -171,6 +171,6 @@ $(document).ready(function () {
         successMsg.addClass('shown');
 
         // Meta de conversão do Google Analytics
-        ga('send', 'event', 'send-contact');
+        ga('send', 'event', 'form', 'submit', 'contact');
     });
 });

@@ -35,7 +35,7 @@ html,
 body {
     background: #ffffff;
     height: 100%;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         overflow-x: hidden;
     }
@@ -64,7 +64,7 @@ h2 {
     font-weight: normal;
     line-height: 1.2;
     margin: 0;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         text-align: left;
         font-size: 1.8em;
@@ -79,7 +79,7 @@ h2 {
     font-size: 1.25em;
     font-weight: normal;
     margin: 0;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         display: none;
     }
@@ -91,7 +91,7 @@ h2 {
     height: auto;
     margin: 0 auto;
     max-width: 1060px;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         width: 100%;
     }
@@ -109,14 +109,14 @@ header {
     width: 100%;
     position: relative;
     background-attachment: fixed;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
             padding-top: 10px;
         }
-    
+
     .logo {
         display: none;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: block;
             text-align: center;
@@ -132,7 +132,7 @@ header {
         text-align: center;
         margin: 0 auto;
         width: 80%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             font-size: 1.6em;
             line-height: 1;
@@ -145,7 +145,7 @@ header {
         font-weight: lighter;
         margin-top: 10px;
         font-size: 75%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: none;
         }
@@ -168,7 +168,7 @@ nav {
     text-align: center;
     text-transform: uppercase;
     transition: all 250ms ease-in-out;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         margin: -200px auto 0 auto;
         line-height: 1.5;
@@ -187,7 +187,7 @@ nav {
         overflow: hidden;
         position: relative;
         transition: all 200ms;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: block;
             width: 100%;
@@ -209,7 +209,7 @@ nav {
             z-index: -1;
         }
     }
-    
+
     .logo {
         @media (max-width: $media-breakpoint-mobile) {
             display: none;
@@ -276,7 +276,7 @@ section {
     height: 100%;
     min-height: 100%;
     padding-top: $menu-height;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         height: auto;
         min-height: auto;
@@ -289,7 +289,7 @@ section {
         height: 3px;
         width: 100px;
         margin: 3em auto;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             margin: 1.5em auto;
         }
@@ -301,7 +301,7 @@ section {
     margin: 0 auto;
     position: relative;
     height: auto;
-    
+
 
     article {
         background-color: #f0f0f0;
@@ -319,7 +319,7 @@ section {
         text-align: center;
         transition: background 200ms;
         width: 32%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
             margin: 5% 0;
@@ -395,6 +395,7 @@ section {
             width: 100%;
         }
     }
+    
 
     h3 {
         font-size: 1.8em;
@@ -453,20 +454,20 @@ section {
             opacity: 1;
             transform: rotate(90deg);
         }
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             left: 95%;
             top: 5px;
             width: 36px;
             height: 36px;
             background-size: cover;
-            opacity: .8;  
-        }  
+            opacity: .8;
+        }
     }
-    
+
     .case-info-button {
         display: none;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             background: url('../img/case-detail-info.png') no-repeat center center;
             position: absolute;
@@ -478,7 +479,7 @@ section {
             height: 36px;
             background-size: cover;
             opacity: .8;
-            
+
         }
     }
 
@@ -494,15 +495,15 @@ section {
         right: 0;
         top: 0;
         width: 30%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
             height: 25%;
             overflow: hidden;
             transition: height 300ms;
-            
+
             &.active {
-                height: 100%;   
+                height: 100%;
             }
         }
     }
@@ -513,7 +514,7 @@ section {
         margin: 8% 0 5% 0;
         text-align: center;
         font-family: $novecento-stack;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             font-size: 1.4em;
         }
@@ -525,12 +526,12 @@ section {
             font-size: 0.45em;
             text-transform: uppercase;
             display: block;
-            
+
             @media (max-width: $media-breakpoint-mobile) {
             font-size: 0.6em;
         }
-            
-            
+
+
         }
     }
 
@@ -547,8 +548,8 @@ section {
 
     .case-about-text {
         margin: 8% 0 4% 0;
-        max-height: 360px;
-        
+        max-height: 300px;
+
         @media (max-width: $media-breakpoint-mobile) {
             height: 280px !important;
         }
@@ -569,43 +570,46 @@ section {
     .case-external-link {
         box-shadow: 0 -3px 0 0 transparentize(white, 0.7) inset;
         color: white;
+        display: inline-block;
         font-size: 1em;
         font-weight: 600;
+        margin-right: 10px;
         padding: 5px;
         position: relative;
         text-decoration: none;
         transition: all 250ms;
-        display: inline-block;
 
         &:hover {
-            box-shadow: 0 -30px 0 transparentize(white, 0.6) inset;
+            box-shadow: 0 -30px 0 transparentize(white, 0.7) inset;
             color: darken($brand-primary, 30);
         }
     }
-    
+
     .store-btn {
-        width: 24px;
-        height: 24px;
+        background: url(../img/store-icons.png) no-repeat left center;
         display: inline-block;
-        background-repeat: no-repeat;
-        background-position: left center;
-        margin-left: 15px;
-        vertical-align: bottom;
-        background-size: cover;
-        background-image: url(../img/store-icons.png);
-        transition: opacity 300ms;
-        
-        
-        &:hover {
-        }
-    
-        &.apple {
-            background-position: -24px 0px;
-        }
+        height: 32px;
+        margin-right: 10px;
+        transition: background 300ms;
+        vertical-align: middle;
+        width: 32px;
+        background-color: transparentize(white, 0.7);
+        border-radius: 2px;
 
         &.play {
             background-position: 0px 0px;
+        }
 
+        &.apple {
+            background-position: -32px 0px;
+        }
+
+        &.windows {
+            background-position: -64px 0px;
+        }
+
+        &:hover {
+            background-color: transparentize(white, 0.8)
         }
     }
 
@@ -621,7 +625,7 @@ section {
         position: absolute;
         top: 0;
         width: 70%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
             position: absolute;
@@ -632,7 +636,7 @@ section {
             min-height: 75%;
 
             img {
-                max-width: 100%;    
+                max-width: 100%;
             }
         }
     }
@@ -717,19 +721,19 @@ section {
     background: #ff6600 url('../img/processo-hero.png') no-repeat center center;
     background-size: cover;
     text-align: center;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         background-size: cover;
         min-height: 100%;
     }
-    
+
     .processo-mobile {
         display: none;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: block;
         }
-        
+
         li {
             text-align: left;
             font-size: 1em;
@@ -744,12 +748,12 @@ section {
                 display: inline-block;
                 position: relative;
             }*/
-            
+
             &.feedback-process {
                 color: #aa4400;
                 font-size: 1.2em;
                 font-weight: 400;
-                
+
                 span {
                     border: 3px solid #aa4400;
                 }
@@ -786,7 +790,7 @@ section {
     h2 {
         color: white;
         font-size: 2.5em;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             text-align: left;
             font-size: 1.8em;
@@ -802,7 +806,7 @@ section {
         width: 915px;
         position: relative;
         margin: 120px auto 0;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: none;
         }
@@ -964,7 +968,7 @@ section {
 #para-quem {
     padding-left: 19%;
     padding-right: 19%;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         padding-left: 5%;
         padding-right: 5%;
@@ -978,7 +982,7 @@ section {
         height: 128px;
         position: relative;
         width: 128px;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 64px;
             height: 64px;
@@ -986,7 +990,7 @@ section {
             float: left;
             vertical-align: middle;
             margin: 10% 8% auto 3%;
-            
+
         }
     }
 
@@ -997,7 +1001,7 @@ section {
     .separator {
         background-color: darken(white, 10);
         margin: 1em 0 4em 0;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             margin: 1em 0 1.8em 0;
         }
@@ -1014,7 +1018,7 @@ section {
         text-align: center;
         transition: background 500ms;
         width: 32%;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             display: block;
             width: 100%;
@@ -1040,7 +1044,7 @@ section {
         font-family: $georgia-stack;
         font-size: 1.1em;
         margin: 1em 0;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             float: left;
             width: 65%;
@@ -1062,7 +1066,7 @@ section {
             left: 28px;
             top: 3px;
             width: 88px;
-            
+
             @media (max-width: $media-breakpoint-mobile) {
                 height: 56px;
                 width: 44px;
@@ -1087,7 +1091,7 @@ section {
             width: 51px;
             left: 39px;
             top: 15px;
-            
+
             @media (max-width: $media-breakpoint-mobile) {
                 height: 25px;
                 width: 25px;
@@ -1111,7 +1115,7 @@ section {
             left: 49px;
             top: 89px;
             width: 23px;
-            
+
             @media (max-width: $media-breakpoint-mobile) {
                 display: none;
             }
@@ -1125,7 +1129,7 @@ section {
 
     h2 {
         text-align: center;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             text-align: left;
             font-size: 1.8em;
@@ -1143,7 +1147,7 @@ section {
     form {
         width: 500px;
         margin: 0 auto;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
         }
@@ -1194,7 +1198,7 @@ section {
         transition: all 500ms;
         visibility: hidden;
         width: 500px;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
         }
@@ -1215,10 +1219,10 @@ footer {
     font-size: 1.2em;
     font-family: $georgia-stack;
     padding-bottom: 2%;
-    
+
     @media (max-width: $media-breakpoint-mobile) {
         text-align: center;
-        height: auto;        
+        height: auto;
     }
 
     .footer-location {
@@ -1229,12 +1233,12 @@ footer {
         a {
             color: white;
         }
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
             margin: 10px 0;
             text-align: center;
-            
+
             /*&:after {
                 content: "";
                 width: 100%;
@@ -1262,7 +1266,7 @@ footer {
     .footer-social-media {
         width: 40%;
         float: right;
-        
+
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
         }
@@ -1282,13 +1286,13 @@ footer {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    
+
     svg {
         width: 100%;
         height: 100%;
         margin-top: -40px;
     }
-    
+
     h1 {
         font-family: $novecento-stack;
         font-size: 8.4em;
@@ -1299,14 +1303,14 @@ footer {
         text-align: center;
         width: 400px;
         color: darken($brand-primary, 10);
-        
+
         span {
             font-size: .15em;
             display: block;
             color: $brand-primary;
         }
     }
-    
+
     a {
         text-decoration: none;
         color: #fff;
@@ -1315,5 +1319,5 @@ footer {
         display: block;
         margin-top: -10px;
     }
-    
+
 }
