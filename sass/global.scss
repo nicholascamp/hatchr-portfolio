@@ -1,11 +1,3 @@
-@import "modules/utils";
-
-@import 'partials/normalize';
-@import 'partials/fonts';
-
-@import "vendor/slick";
-@import "vendor/nanoscroller";
-
 $brand-primary: #ff6600;
 
 $media-breakpoint-mobile: 480px;
@@ -16,6 +8,16 @@ $menu-height-small: 60px;
 $novecento-stack: 'Novecento', sans-serif;
 $open-sans-stack: 'Open Sans', sans-serif;
 $georgia-stack: Georgia, Times, "Times New Roman", serif;
+
+@import "modules/utils";
+
+@import 'partials/normalize';
+@import 'partials/fonts';
+@import 'partials/last-cases';
+
+@import "vendor/slick";
+@import "vendor/nanoscroller";
+
 
 // border-box FTW!
 * {
@@ -126,7 +128,7 @@ header {
 
     h1 {
         font-family: $novecento-stack;
-        font-size: 3em;
+        font-size: 2.2em;
         font-weight: normal;
         line-height: 0.8;
         text-align: center;
@@ -144,7 +146,7 @@ header {
         font-family: $open-sans-stack;
         font-weight: lighter;
         margin-top: 10px;
-        font-size: 75%;
+        font-size: 100%;
 
         @media (max-width: $media-breakpoint-mobile) {
             display: none;

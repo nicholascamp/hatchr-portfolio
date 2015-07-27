@@ -106,6 +106,7 @@ $(document).ready(function () {
     /*
      * Telas de detalhamento de cases
      */
+    /*
     var casesClick = $('#cases article a');
 
     casesClick.on('click', function (e) {
@@ -125,8 +126,23 @@ $(document).ready(function () {
         };
 
     });
+    */
+    
+    /*
+     * Novo estilo de cases da home (teste)
+     */
+    
+    var newCase = $('.last-cases');
+    
+    newCase.find('.slider').slick({
+        'autoplay': true,
+        'pauseOnHover': true,
+        'dots': true,
+        'speed': 500
+    });
+    
 
-    casesClick.on('click', sweetScroll);
+    //casesClick.on('click', sweetScroll);
 
     $('.case-about .case-info-button').on('click', function (e) {
         e.preventDefault();
@@ -173,4 +189,5 @@ $(document).ready(function () {
         // Meta de conversão do Google Analytics
         ga('send', 'event', 'form', 'submit', 'contact');
     });
+    
 });
