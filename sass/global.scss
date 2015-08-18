@@ -1267,7 +1267,8 @@ footer {
 
     .footer-social-media {
         width: 40%;
-        float: right;
+        margin: 0 30%;
+        text-align: center;
 
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;

@@ -106,7 +106,6 @@ $(document).ready(function () {
     /*
      * Telas de detalhamento de cases
      */
-    /*
     var casesClick = $('#cases article a');
 
     casesClick.on('click', function (e) {
@@ -126,13 +125,12 @@ $(document).ready(function () {
         };
 
     });
-    */
     
     /*
      * Novo estilo de cases da home (teste)
      */
     
-    var newCase = $('.last-cases');
+    var newCase = $('#last-cases');
     
     newCase.find('.slider').slick({
         'autoplay': true,
@@ -140,6 +138,10 @@ $(document).ready(function () {
         'dots': true,
         'speed': 500
     });
+
+    console.log(newCase);
+    console.log(newCase.find('.slider'));
+
     
 
     //casesClick.on('click', sweetScroll);
