@@ -31,19 +31,21 @@ $(document).ready(function () {
      * Menu principal
      * Se torna fixo no topo quando fora do viewport
      */
-    var nav = $('nav'),
-        navTopPos = nav.position().top;
+    if(!$('body').hasClass('cases-page')) {
+        var nav = $('.home-nav'),
+            navTopPos = nav.position().top;
 
-    $(window).on('scroll', function () {
-        if ($(this).scrollTop() > navTopPos - nav.outerHeight()) {
-            nav.addClass('fixed');
-        } else {
-            nav.removeClass('fixed');
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > navTopPos - nav.outerHeight()) {
+                nav.addClass('fixed');
+            } else {
+                nav.removeClass('fixed');
+            }
+        });
+
+        if (location.hash) {
+            $(window).trigger('scroll');
         }
-    });
-
-    if (location.hash) {
-        $(window).trigger('scroll');
     }
 
     /*
@@ -64,7 +66,7 @@ $(document).ready(function () {
 
     }
 
-    var navAnchors = $('nav a');
+    var navAnchors = $('.home-nav a');
 
     navAnchors.on('click', sweetScroll);
 
@@ -125,26 +127,6 @@ $(document).ready(function () {
         };
 
     });
-    
-    /*
-     * Novo estilo de cases da home (teste)
-     */
-    
-    var newCase = $('#last-cases');
-    
-    newCase.find('.slider').slick({
-        'autoplay': true,
-        'pauseOnHover': true,
-        'dots': true,
-        'speed': 500
-    });
-
-    console.log(newCase);
-    console.log(newCase.find('.slider'));
-
-    
-
-    //casesClick.on('click', sweetScroll);
 
     $('.case-about .case-info-button').on('click', function (e) {
         e.preventDefault();
@@ -171,10 +153,12 @@ $(document).ready(function () {
 
     processPath.css('transition', 'stroke-dashoffset 3s linear');
 
+
     /*
      * Efeito Parallax
      */
     $('[data-speed]').parallax();
+
 
     /*
      * Envio assíncrono do formulário de contato
@@ -191,5 +175,26 @@ $(document).ready(function () {
         // Meta de conversão do Google Analytics
         ga('send', 'event', 'form', 'submit', 'contact');
     });
+
+
+    /*
+     * Novo estilo de cases da home
+     */
+    var lastCases = $('#last-cases');
+
+    lastCases.find('.last-cases-slider').slick({
+        'draggable': false,
+        'pauseOnHover': true,
+        'prevArrow': lastCases.find('> .arrow.left'),
+        'nextArrow': lastCases.find('> .arrow.right'),
+    });
+
+    lastCases.find('.slider').slick({
+        'autoplay': true,
+        'pauseOnHover': true,
+        'dots': true,
+        'speed': 500
+    });
+
     
 });

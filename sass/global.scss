@@ -14,6 +14,7 @@ $georgia-stack: Georgia, Times, "Times New Roman", serif;
 @import 'partials/normalize';
 @import 'partials/fonts';
 @import 'partials/last-cases';
+@import 'partials/cases-page';
 
 @import "vendor/slick";
 @import "vendor/nanoscroller";
@@ -569,24 +570,6 @@ section {
         }
     }
 
-    .case-external-link {
-        box-shadow: 0 -3px 0 0 transparentize(white, 0.7) inset;
-        color: white;
-        display: inline-block;
-        font-size: 1em;
-        font-weight: 600;
-        margin-right: 10px;
-        padding: 5px;
-        position: relative;
-        text-decoration: none;
-        transition: all 250ms;
-
-        &:hover {
-            box-shadow: 0 -30px 0 transparentize(white, 0.7) inset;
-            color: darken($brand-primary, 30);
-        }
-    }
-
     .store-btn {
         background: url(../img/store-icons.png) no-repeat left center;
         display: inline-block;
@@ -608,6 +591,9 @@ section {
 
         &.windows {
             background-position: -64px 0px;
+        }
+        &.responsive {
+            background-position: -96px 0px;
         }
 
         &:hover {
@@ -1220,16 +1206,15 @@ footer {
     color: #fff;
     font-size: 1.2em;
     font-family: $georgia-stack;
-    padding-bottom: 2%;
+    text-align: center;
 
     @media (max-width: $media-breakpoint-mobile) {
-        text-align: center;
+        //text-align: center;
         height: auto;
     }
 
     .footer-location {
-        width: 40%;
-        float: left;
+        display: inline-block;
         text-align: right;
 
         a {
@@ -1266,9 +1251,9 @@ footer {
     }
 
     .footer-social-media {
-        width: 40%;
-        margin: 0 30%;
-        text-align: center;
+        display: inline-block;
+        text-align: left;
+        margin-left: 5%;
 
         @media (max-width: $media-breakpoint-mobile) {
             width: 100%;
