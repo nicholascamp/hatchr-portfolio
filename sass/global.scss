@@ -114,8 +114,8 @@ header {
     background-attachment: fixed;
 
     @media (max-width: $media-breakpoint-mobile) {
-            padding-top: 10px;
-        }
+        padding-top: 10px;
+    }
 
     .logo {
         display: none;
@@ -137,8 +137,9 @@ header {
         width: 80%;
 
         @media (max-width: $media-breakpoint-mobile) {
-            font-size: 1.6em;
+            font-size: 1.8em;
             line-height: 1;
+            margin-top: 40px;
         }
     }
 
@@ -278,7 +279,7 @@ nav {
 section {
     height: 100%;
     min-height: 100%;
-    padding-top: $menu-height;
+    padding-top: $menu-height-small + 20px;
 
     @media (max-width: $media-breakpoint-mobile) {
         height: auto;

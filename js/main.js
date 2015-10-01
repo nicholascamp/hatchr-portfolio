@@ -31,7 +31,8 @@ $(document).ready(function () {
      * Menu principal
      * Se torna fixo no topo quando fora do viewport
      */
-    if(!$('body').hasClass('cases-page')) {
+
+    if($(window).width() > 480 && !$('body').hasClass('cases-page')) {
         var nav = $('.home-nav'),
             navTopPos = nav.position().top;
 
@@ -183,6 +184,7 @@ $(document).ready(function () {
     var lastCases = $('#last-cases');
 
     lastCases.find('.last-cases-slider').slick({
+        'dots': false,
         'draggable': false,
         'pauseOnHover': true,
         'prevArrow': lastCases.find('> .arrow.left'),
@@ -190,11 +192,10 @@ $(document).ready(function () {
     });
 
     lastCases.find('.slider').slick({
+        'dots': false,
         'autoplay': true,
         'pauseOnHover': true,
-        'dots': true,
         'speed': 500
     });
 
-    
 });

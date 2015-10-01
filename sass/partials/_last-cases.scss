@@ -1,9 +1,14 @@
 #last-cases {
-    @extend %clearfix;
-    padding: 80px 0;
     position: relative;
-    margin-bottom: 60px;
-    
+
+    .title-section {
+        text-align: center;
+    }
+
+    .subtitle-section {
+        text-align: center;
+    }
+
     .arrow {
         appearance: none;
         -moz-appearance: none;
@@ -19,7 +24,7 @@
         background-repeat: no-repeat;
         z-index: 1;
         border: none;
-        
+
         span {
             background-repeat: no-repeat;
             transition: all 300ms;
@@ -34,9 +39,8 @@
             background-repeat: no-repeat;
             background-color: white;
             transition: all 300ms;
-            
         }
-        
+
         &.right {
             right: 30px;
             background-position: left center;
@@ -45,13 +49,13 @@
             &:hover {
                 right: 20px;
             }
-            
+
             span {
                 right: 0;
                 background-position: -60px 0;
             }
         }
-        
+
         &.left {
             left: 30px;
             background-position: right center;
@@ -60,20 +64,22 @@
             &:hover {
                 left: 20px;
             }
-            
+
             span {
                 left: 0;
                 background-position: 0 0;
             }
         }
     }
-    
-        
+
     .slider {
-        width: 55%;
-        margin-left: 5%;
-        height: 430px;
         float: left;
+        margin-left: 5%;
+        width: 55%;
+
+        &.slick-slider {
+            margin-bottom: 0;
+        }
 
         .slick-slider,
         .slick-list,
@@ -84,8 +90,9 @@
         }
 
         .slick-slide {
+            margin: 0;
+            padding: 0;
             text-align: center;
-            padding-bottom: 30px;
 
             img {
                 display: inline-block;
@@ -93,26 +100,19 @@
             }
         }
     }
-    
-    .title-section {
-        text-align: center;    
-    }
-    .subtitle-section {
-        text-align: center;
-    }
-    
+
     aside {
         width: 35%;
         float: left;
     }
-    
+
     article {
         @extend %clearfix;
 
         &:not(:first-of-type) {
             display: none;
         }
-        
+
         h3 {
             color: $brand-primary;
             font-size: 2.2em;
@@ -142,14 +142,14 @@
             height: 2px;
             margin: 3% 0;
             width: 100px;
-        }    
+        }
     }
-    
+
     .case-about-text {
         margin: 8% 0 4% 0;
         max-height: 215px;
         color: #999;
-        
+
         a {
             color: $brand-primary;
             text-decoration: none;
@@ -202,20 +202,27 @@
             background-color: transparentize($brand-primary, 0.2)
         }
     }
-    
-    .show-cases-page {
+
+    .more-cases {
+        clear: both;
         text-align: center;
         width: 100%;
-        clear: both;
-    
+
         a {
             background-color: $brand-primary;
-            color: white;
-            padding: 10px 15px;
             border-radius: 4px;
+            color: white;
+            display: inline-block;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 10px 15px;
             text-decoration: none;
-            
+            text-transform: uppercase;
+            transition: all 300ms;
+
+            &:hover {
+                background-color: lighten($brand-primary, 10);
+            }
         }
     }
-
 }
