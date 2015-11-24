@@ -1,16 +1,434 @@
 .cases-page {
-	header {
-		background-image: none;
-		height: 100px;
-		padding-top: 0;
-		background-color: $brand-primary;
+    header {
+        height: 100px;
+        padding-top: 0;
 
-		h1 {
-			display: none;
-		}
-	}
+        @media (max-width: $media-breakpoint-mobile) {
+            height: auto;
+        }
+
+        .logo {
+            @media (max-width: $media-breakpoint-mobile) {
+                margin-bottom: 0;
+                padding: 20px 0;
+            }
+        }
+    }
+
+    nav {
+        @media (max-width: $media-breakpoint-mobile) {
+            background-color: $brand-primary;
+            height: auto;
+            margin: 0;
+        }
+    }
 
     section {
         padding-top: 50px;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            padding-top: 25px;
+        }
+    }
+
+    .subtitle-section {
+        @media (max-width: $media-breakpoint-mobile) {
+            display: block;
+        }
+    }
+}
+
+#cases {
+    @extend %clearfix;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    article {
+        background-color: #f0f0f0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto 400px;
+        box-shadow: 0 0 2px 0 transparentize(black, 0.95);
+        border-radius: 4px;
+        float: left;
+        height: 180px;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        transition: background 200ms;
+        width: 32%;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            margin: 5% 0;
+            height: 150px;
+        }
+
+        &:hover {
+            background-size: auto 180px;
+
+            a {
+                opacity: 1;
+                transform: scale(1);
+                visibility: visible;
+            }
+        }
+
+        &:nth-child(3n+3) {
+            margin-right: 0;
+        }
+
+        &.dids {
+            background-image: url('../img/cases/dids/case-dids-hostel-startup.jpg');
+        }
+
+        &.starthink {
+            background-image: url('../img/cases/starthink/case-starthink-sistema-web.jpg');
+        }
+        &.arpex {
+            background-image: url('../img/cases/arpex/case-arpex-website.jpg');
+        }
+        &.allpet {
+            background-image: url('../img/cases/allpet/case-mvp-allpet-startup.jpg');
+        }
+        &.crivs {
+            background-image: url('../img/cases/crivs/case-mvp-crivs-startup.jpg');
+        }
+        &.hads {
+            background-image: url('../img/cases/hads/mvp-startup-monetizacao-blog.jpg');
+        }
+        &.business {
+            background-image: url('../img/cases/business/case-mvp-business-bang-theory-startup.jpg');
+        }
+        &.kebragelo {
+            background-image: url('../img/cases/kebragelo/case-mvp-kebragelo-startup.jpg');
+        }
+        &.ocupe {
+            background-image: url('../img/cases/ocupe/case-mvp-ocupe-startup.jpg');
+        }
+        &.voceqpad {
+            background-image: url('../img/cases/voceqpad/case-mvp-voceqpad-startup.jpg');
+        }
+        &.votereza {
+            background-image: url('../img/cases/votereza/case-mvp-votereza-startup.jpg');
+        }
+        &.your-project {
+            background-image: url('../img/add-case.jpg');
+        }
+
+        a {
+            background: transparentize($brand-primary, 0.2);
+            color: white;
+            cursor: zoom-in;
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            text-decoration: none;
+            top: 0;
+            transform: scale(2);
+            transition: all 250ms;
+            visibility: hidden;
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 1.8em;
+            margin-top: 50px;
+            font-family: $novecento-stack;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#cases-detail {
+    height: 0;
+    min-height: 0;
+    width: 0;
+
+    article {
+        background: #ff6600;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transition: all 750ms;
+        visibility: hidden;
+        width: 100%;
+        z-index: 1000;
+
+        &.active {
+            opacity: 1;
+            right: 0;
+            visibility: visible;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .case-close-button {
+        background: url('../img/case-detail-back.png') no-repeat center center;
+        bottom: 20px;
+        height: 48px;
+        left: 50%;
+        margin-left: -24px;
+        opacity: .5;
+        position: absolute;
+        transition: opacity 300ms,
+                    transform 500ms;
+        width: 48px;
+        z-index: 1001;
+
+        &:hover {
+            opacity: 1;
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: $media-breakpoint-mobile) {
+            left: 95%;
+            top: 5px;
+            width: 36px;
+            height: 36px;
+            background-size: cover;
+            opacity: .8;
+        }
+    }
+
+    .case-info-button {
+        display: none;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            background: url('../img/case-detail-info.png') no-repeat center center;
+            position: absolute;
+            z-index: 1001;
+            display: block;
+            left: 5px;
+            top: 5px;
+            width: 36px;
+            height: 36px;
+            background-size: cover;
+            opacity: .8;
+
+        }
+    }
+
+    .case-about {
+        background: darken($brand-primary, 3);
+        box-shadow: 0 0 0 6px transparentize(black, 0.98),
+                    0 0 0 3px transparentize(black, 0.98),
+                    1px 0 0 0 transparentize(white, 0.95) inset;
+        color: lighten($brand-primary, 45);
+        height: 100%;
+        padding: 0 3%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            height: 25%;
+            overflow: hidden;
+            transition: height 300ms;
+
+            &.active {
+                height: 100%;
+            }
+        }
+    }
+
+    h3 {
+        color: white;
+        font-size: 2.2em;
+        margin: 12% 0 5% 0;
+        text-align: center;
+        font-family: $novecento-stack;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            font-size: 1.4em;
+        }
+
+        span {
+            color: lighten($brand-primary, 40);
+            font-family: $open-sans-stack;
+            font-weight: 600;
+            font-size: 0.45em;
+            text-transform: uppercase;
+            display: block;
+
+            @media (max-width: $media-breakpoint-mobile) {
+            font-size: 0.6em;
+        }
+
+
+        }
+    }
+
+    .separator {
+        background: transparentize(white, 0.7);
+        height: 2px;
+        margin: 8% auto;
+        width: 100px;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    .case-about-text {
+        margin: 12% 0 4% 0;
+        max-height: 300px;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            height: 280px !important;
+        }
+
+        .nano-content {
+            padding-right: 14px;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .store-btn {
+        background: url(../img/store-icons.png) no-repeat left center;
+        display: inline-block;
+        height: 32px;
+        margin-right: 10px;
+        transition: background 300ms;
+        vertical-align: middle;
+        width: 32px;
+        background-color: transparentize(white, 0.7);
+        border-radius: 2px;
+
+        &.play {
+            background-position: 0px 0px;
+        }
+
+        &.apple {
+            background-position: -32px 0px;
+        }
+
+        &.windows {
+            background-position: -64px 0px;
+        }
+        &.responsive {
+            background-position: -96px 0px;
+        }
+
+        &:hover {
+            background-color: transparentize(white, 0.8)
+        }
+    }
+
+    .slider {
+        background-image: radial-gradient(ellipse at center, #ff6600 0%, #da4a02 100%),
+                        url(../img/background-cases-texture.png);
+        background-color: #ff6600;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 70%;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 75% !important;
+            top: auto;
+            min-height: 75%;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .slide-content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-slide {
+        text-align: center;
+        padding-bottom: 30px;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    .slick-dots {
+        bottom: 5px;
+
+        li {
+            margin: 0 10px;
+
+            &.slick-active {
+                button {
+                    background: white;
+                    transform: scale(1);
+                }
+            }
+        }
+
+        button {
+            background: transparentize(white, 0.7);
+            border-radius: 12px;
+            content: '';
+            height: 12px;
+            margin: 0;
+            transform: scale(0.8);
+            transition: all 150ms;
+            width: 12px;
+
+            &:before {
+                content: '';
+            }
+        }
     }
 }
