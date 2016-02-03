@@ -10,20 +10,28 @@
     }
 
     .arrow {
-        appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
-        display: block;
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        overflow: hidden;
-        top: 50%;
-        margin-top: -20px;
-        transition: all 200ms;
+        appearance: none;
+        background-color: transparent;
         background-repeat: no-repeat;
-        z-index: 1;
         border: none;
+        display: block;
+        height: 60px;
+        margin-top: -20px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transition: all 200ms;
+        width: 60px;
+        z-index: 1;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            height: 30px;
+            top: 205px;
+            width: 30px;
+
+        }
 
         span {
             background-repeat: no-repeat;
@@ -37,14 +45,23 @@
             top: 0;
             background-image: url(../img/arrow-icon.png);
             background-repeat: no-repeat;
-            background-color: white;
             transition: all 300ms;
+
+            @media (max-width: $media-breakpoint-mobile) {
+                width: 40px;
+                height: 40px;
+
+                background-size: cover;
+            }
         }
 
         &.right {
             right: 30px;
-            background-position: left center;
             transition: all 100ms;
+
+            @media (max-width: $media-breakpoint-mobile) {
+                right: 5px;
+            }
 
             &:hover {
                 right: 20px;
@@ -52,14 +69,17 @@
 
             span {
                 right: 0;
-                background-position: -60px 0;
+                background-position: right center;
             }
         }
 
         &.left {
             left: 30px;
-            background-position: right center;
             transition: all 100ms;
+
+            @media (max-width: $media-breakpoint-mobile) {
+                left: 5px;
+            }
 
             &:hover {
                 left: 20px;
@@ -76,6 +96,11 @@
         float: left;
         margin-left: 5%;
         width: 55%;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            margin: 0;
+            width: 100%;
+        }
 
         &.slick-slider {
             margin-bottom: 0;
@@ -101,9 +126,23 @@
         }
     }
 
-    aside {
+    .case-about {
         width: 35%;
         float: left;
+
+        @media (max-width: $media-breakpoint-mobile) {
+            clear: both;
+            text-align: center;
+            width: 100%;
+
+            h3 {
+                margin-top: 0;
+            }
+
+            .separator, .case-about-text, .store-btn {
+                display: none;
+            }
+        }
     }
 
     article {
